@@ -1,13 +1,13 @@
 CIS526 - Website
-======
-Sprint 3 Goals
+======<br>
+Sprint 3 Goals<br>
 
-1) Fix view for all models
-2) Add search for course index page (maybe others?)
-3) Add sign-in/authentication
-4) Add information to homepage
+1) Fix view for all models<br>
+2) Add search for course index page (maybe others?)<br>
+3) Add sign-in/authentication<br>
+4) Add information to homepage<br>
 
-Future Work
+Future Work<br>
 
-1) Seperating admin and user authorities (adding/editing pages, etc..)
-2) Finalize basic UI
+1) Seperating admin and user authorities (adding/editing pages, etc..)<br>
+2) Finalize basic UI<br>
