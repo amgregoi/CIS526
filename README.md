@@ -1,4 +1,4 @@
-CIS526 - Website
+CIS526 - Website<br>
 ======<br>
 Sprint 3 Goals<br>
 
