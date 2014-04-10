@@ -1,0 +1,132 @@
+#wrapper{
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+	min-width: 901px;
+}
+
+	#wrap{
+		min-width: 65%; /* Spans the width of the page */
+		position: relative; /*background-color: #366b82;*/ 
+		}
+		#horizontal_bar {
+		width: 100%;
+		height: 36px;
+		background-color: #512888;
+		border-bottom: 5px solid #ECD391;
+}
+
+			.navbar {
+				height: 36px;
+				padding: 0;
+				margin: 0;
+				position: relative; /* Ensures that the menu doesn’t affect other elements */
+				float:center;
+				min-width:600px;
+				}
+				
+				.navbar li {
+					height: 36px;
+					width: 100px; /* Each menu item is 150px wide */
+					float: left; /* This lines up the menu items horizontally */
+					text-align: center; /* All text is placed in the center of the box */
+					list-style: none; /* Removes the default styling (bullets) for the list */
+					font: normal bold 12px/1.2em Arial, Verdana, Helvetica;
+					padding: 0;
+					margin: 0;
+					background-color: #5D478B; }
+
+				.navbar a {
+					padding: 18px 0; /* Adds a padding on the top and bottom so the text appears centered vertically */
+					text-decoration: none; /* Removes the default hyperlink styling. */
+					color: white; /* Text color is white */
+					display: block; }
+
+				.navbar li:hover, a:hover { background-color: #5D478B;
+					display:block;}
+
+				.navbar li ul {
+					display: none; /* Hides the drop-down menu */
+					height: auto;
+					margin: 0; /* Aligns drop-down box underneath the menu item */
+					padding: 0; /* Aligns drop-down box underneath the menu item */ 
+				}
+
+
+
+				
+	div#vmenu {
+		margin: 0;
+		padding: 0em 0em 0em 0em;
+		border: solid 1px #54879d;
+		background: #5D478B;
+		width: 13.5em; 
+		position:relative;}
+
+		div#vmenu ul {
+			margin: 0;
+			padding: 0;
+			list-style: none; }
+
+			div#vmenu ul li {
+				margin: 0;
+				padding: 0;
+				list-style: none; }
+
+			div#vmenu ul a:link {
+				margin: 0;
+				padding: .2em 0em .2em .4em;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: medium;
+				background-color: #54879d;
+				color: #0059a0;
+				display: block; }
+
+			div#vmenu ul a:active {
+				margin: 0;
+				padding: .25em .5em .25em .5em;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: medium;
+				background: #54879d;
+				color: #ffffff;
+				display: block; }
+
+			div#vmenu ul a:visited {
+				margin: 0;
+				padding: .25em .5em .25em .5em;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: medium;
+				background: #54879d;
+				color: #ffffff;
+				display: block; }
+
+			div#vmenu ul li a:hover {
+				margin: 0;
+				padding: .2em 0em .2em .4em;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: medium;
+				background-color: #54879d;
+				color: #ffffff;
+				display: block; } 
+				
+	div#main_body{
+		float: left;
+		margin-left: 20%;
+	}
+	
+	#header {
+		background: linear-gradient(to bottom, #4F2684 0%, #7137BD 100%) repeat scroll 0% 0% transparent;
+	}
+	#header-logo{
+		height: 80px;
+		color: #512888;
+		text-decoration: none;
+		margin: -10px 0px 0px 0px;
+		padding:5px;
+		
+	}
+		

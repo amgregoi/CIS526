@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  employer: MyString
+  job_type: Internship
+  description: MyString
+
+two:
+  title: MyString
+  employer: MyString
+  job_type: Full-Time 
+  description: MyString

@@ -1,0 +1,15 @@
+<html>
+<head>
+ <link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<%=render "/layouts/header" %>
+</head>
+<body>
+
+<p> do stuff</p>
+<p>This is club page</p>
+<% for club in Club.all %>
+	<%= link_to club.name, club %>
+<% end %>
+ 
+</body>
+</html>
