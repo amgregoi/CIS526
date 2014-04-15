@@ -3,7 +3,7 @@ class ClubsController < ApplicationController
   # GET /clubs
   # GET /clubs.json
   def index
-    @clubs = Club.all
+    @clubs = Club.filter(search_params.slice(:name_keywords))
   end
   
   # GET /clubs/1
@@ -70,4 +70,9 @@ class ClubsController < ApplicationController
     def club_params
       params.require(:club).permit(:name, :description, :url, :meeting)
     end
+	
+	# Gets trusted parameters for search form
+	def search_params
+	  params.permit(:name_keywords)
+	end
 end

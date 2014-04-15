@@ -4,23 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @date_select = Date.today  # Initialize to today (for when sort form hasn't been used yet) 
-  
-    sort_select = sort_params
-	@date_select = sort_select[0]
-	@free_food_select = sort_select[1]
-	
-	# Show by chosen month/year (defaults to current month/year)
-	time_range = DateTime.new(@date_select.year,@date_select.month,1)..(DateTime.new(@date_select.year,@date_select.month,1) + 1.month)
-	@events = Event.where( 'event_date' => time_range )
-	
-	# Show by whether free food is chosen
-	if (@free_food_select === 1)
-	  @events = @events.where( free_food: true)
-	end
-	
-	# Still not sure why this doesn't work; left here for later investigation
-    #@events = Event.where("strftime('%Y', event_date) = ? AND strftime('%m', event_date) + 0 = ?", @date_select.year, @date_select.month)
+	@events = Event.filter(search_params.slice(:keywords, :chosen_date, :free_food_select))
   end
 
   # GET /events/1
@@ -88,14 +72,14 @@ class EventsController < ApplicationController
       params.require(:event).permit(:title, :event_date, :location, :description, :free_food)
     end
 	
-	# Gets trusted parameters for sort, returning array with sort date
-	# and if free food selected (1 if selected, 0 otherwise)
-	def sort_params
+	# Gets trusted parameters for search form
+	def search_params
+	  new_date = Date.today  # Default value
 	  if(params[:chosen_date])
 	    choice = params[:chosen_date]
-		[ Date.new(choice["date(1i)"].to_i, choice["date(2i)"].to_i, 1), params[:free_food].to_i ]
-	  else
-	    [ Date.today, 0 ]
+	    new_date = Date.new(choice["date(1i)"].to_i, choice["date(2i)"].to_i, 1)
 	  end
+	  
+	  { keywords: params[:keywords], chosen_date: new_date, free_food_select: params[:free_food_select] } 
 	end
 end

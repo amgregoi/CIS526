@@ -5,9 +5,10 @@
 				<ul> 
 				  <li>
 				    <h3>Search</h3>
-					<%= form_tag("/events", method: "get") do %>
-					  <%= date_select("chosen_date", "date", :discard_day => true) %> <br>
-					  <%= label_tag("Free Food:") %> <%= check_box_tag("free_food") %>
+					<%= form_tag events_path, method: "get" do %>
+					  <%= label_tag("Title: ") %> <%= text_field_tag :keywords %> <br/>
+					  <%= date_select(:chosen_date, "date", :discard_day => true) %> <br/>
+					  <%= label_tag("Free Food:") %> <%= check_box_tag :free_food_select %> <br/>
 					  <%= submit_tag "Enter" %>
 					<% end %>
 				  </li> 
