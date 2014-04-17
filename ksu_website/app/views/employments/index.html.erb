@@ -1,6 +1,17 @@
 <%=render "/layouts/header" %>
 
-<h1>Listing employments</h1>
+<h1>Listing Employments</h1>
+
+<h3>Search</h3>
+<%= form_tag employments_path, method: "get" do %>
+  <%= label_tag("Job Title: ") %> 
+    <%= text_field_tag :title_keywords %> <br/>
+  <%= label_tag("Employer: ") %> 
+    <%= text_field_tag :employer_keywords %> <br/>
+  <%= label_tag("Employment Type: ") %> 
+    <%= select_tag :job_type_select, options_for_select(Employment::JOB_TYPE_SELECTIONS.collect{ |j| [j, j] }) %> <br/>
+  <%= submit_tag "Enter" %>
+<% end %>
 
 <table>
   <thead>

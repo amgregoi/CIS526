@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    @courses = Course.filter(search_params.slice(:keywords, :department, :course_num))
   end
 
   # GET /courses/1
@@ -71,4 +71,8 @@ class CoursesController < ApplicationController
     def course_params
       params.require(:course).permit(:title, :description, :department, :course_number, :credits)
     end
+	
+	def search_params
+	  params.permit(:keywords, :department, :course_num)
+	end
 end

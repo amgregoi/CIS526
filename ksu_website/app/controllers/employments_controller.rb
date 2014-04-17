@@ -4,7 +4,7 @@ class EmploymentsController < ApplicationController
   # GET /employments
   # GET /employments.json
   def index
-    @employments = Employment.all
+    @employments = Employment.filter(search_params.slice(:title_keywords, :employer_keywords, :job_type_select))
   end
 
   # GET /employments/1
@@ -71,4 +71,8 @@ class EmploymentsController < ApplicationController
     def employment_params
       params.require(:employment).permit(:title, :employer, :job_type, :description)
     end
+	
+	def search_params
+	  params.permit(:title_keywords, :employer_keywords, :job_type_select)
+	end
 end
