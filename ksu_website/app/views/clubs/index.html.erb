@@ -1,39 +1,24 @@
-<h1>Listing clubs</h1>
-
-<h3>Search</h3>
-<%= form_tag clubs_path, method: "get" do %>
-  <%= label_tag("Name: ") %> <%= text_field_tag :name_keywords %> <br/>
-  <%= submit_tag "Enter" %>
-<% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Url</th>
-      <th>Meeting</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clubs.each do |club| %>
-      <tr>
-        <td><%= club.name %></td>
-        <td><%= club.description %></td>
-        <td><%= club.url %></td>
-        <td><%= club.meeting %></td>
-        <td><%= link_to 'Show', club %></td>
-        <td><%= link_to 'Edit', edit_club_path(club) %></td>
-        <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Club', new_club_path %>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<br><br>
+<div class="panel-group" id="accordion">
+	<% for club in Club.all %>
+		<div class="panel panel-default">
+			<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=club.name%>">
+				<div class="panel-title">
+					<h4>
+						<a href="#"> <%= club.name%></a>
+					</h4>
+				</div>
+			</div>
+			<div id="<%=club.name%>" class="panel-collapse collapse in">
+				<div class="panel-body"> <%= club.description %> </div>
+			</div>
+	<% end %>
+</div>
+ 
+</body>
+</html>

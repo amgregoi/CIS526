@@ -6,7 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Club.create(name: 'ACM', url: 'http://acm.cis.ksu.edu', description: 'computer stuff', meeting: 'Tuesday 6:00 PM')
+Club.create(name: 'ACM', url: 'http://acm.cis.ksu.edu', description: 'computer stuff for the ACM', meeting: 'Tuesday 6:00 PM')
 
-Club.create(name: 'NOT ACM', url: 'http://acm.cis.ksu.edu', description: 'computer stuff', meeting: 'Tuesday 6:00 PM')
+Club.create(name: 'NOT ACM', url: 'http://acm.cis.ksu.edu', description: 'computer stuff for the NOT ACM', meeting: 'Tuesday 6:00 PM')
+
+Club.create(name: 'NOT ACM', url: 'http://acm.cis.ksu.edu', description: 'computer stuff for the NOT ACM', meeting: 'Tuesday 6:00 PM')
+
+Club.create(name: 'NOT ACM', url: 'http://acm.cis.ksu.edu', description: 'computer stuff for the NOT ACM', meeting: 'Tuesday 6:00 PM')
 
