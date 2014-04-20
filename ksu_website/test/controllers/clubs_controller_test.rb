@@ -18,7 +18,7 @@ class ClubsControllerTest < ActionController::TestCase
 
   test "should create club" do
     assert_difference('Club.count') do
-      post :create, club: { description: @club.description, meeting: @club.meeting, name: @club.name, url: @club.url }
+      post :create, club: { description: @club.description, meeting: @club.meeting, name: @club.name + "unique", url: @club.url }
     end
 
     assert_redirected_to club_path(assigns(:club))

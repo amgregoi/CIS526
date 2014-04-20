@@ -18,7 +18,7 @@ class FacultiesControllerTest < ActionController::TestCase
 
   test "should create faculty" do
     assert_difference('Faculty.count') do
-      post :create, faculty: { email: @faculty.email, name: @faculty.name, office: @faculty.office, phone_number: @faculty.phone_number, title: @faculty.title }
+      post :create, faculty: { email: @faculty.email, name: @faculty.name + "unique", office: @faculty.office, phone_number: @faculty.phone_number, title: @faculty.title }
     end
 
     assert_redirected_to faculty_path(assigns(:faculty))
@@ -35,7 +35,7 @@ class FacultiesControllerTest < ActionController::TestCase
   end
 
   test "should update faculty" do
-    patch :update, id: @faculty, faculty: { email: @faculty.email, name: @faculty.name, office: @faculty.office, phone_number: @faculty.phone_number, title: @faculty.title }
+    patch :update, id: @faculty, faculty: { email: @faculty.email, name: @faculty.name + "unique", office: @faculty.office, phone_number: @faculty.phone_number, title: @faculty.title }
     assert_redirected_to faculty_path(assigns(:faculty))
   end
 

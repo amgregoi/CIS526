@@ -76,4 +76,22 @@ class EventTest < ActiveSupport::TestCase
 	event = Event.new ({ title: " ", event_date: (DateTime.civil_from_format :local, 2012), location: "testlocation", description: "it's an event" })
     assert_not event.save, "saved title with only blank space"
   end
+
+
+# Scope Tests
+  test "events retrieved correctly from given keywords for title" do
+	assert Event.title_keywords("key").length == 3, "Given title_keyword 'key' isn't retrieved correctly"
+    assert Event.title_keywords("random").length == 1, "Given title_keyword 'random' isn't retrieved correctly"
+	assert Event.title_keywords("key1").length == 1, "Given title_keyword 'key1' isn't retrieved correctly"
+  end
+  
+  test "events retrieved correctly from given date" do
+    assert Event.chosen_date(DateTime.new(2014, 2, 1)).length == 2, "Given chosen_date '02-01-2014' isn't retrieved correctly"
+	assert Event.chosen_date(DateTime.new(2014, 3, 5)).length == 1, "Given chosen_date '03-05-2014' isn't retrieved correctly"
+	assert Event.chosen_date(DateTime.new(2013, 2, 25)).length == 1, "Given chosen_date '02-25-2013' isn't retrieved correctly"
+  end
+  
+  test "event retrieved correctly with free_food" do
+    assert Event.free_food_select(1).length == 2, "Events with free_food not retrieved correctly"
+  end
 end

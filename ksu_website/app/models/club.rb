@@ -7,5 +7,5 @@ class Club < ActiveRecord::Base
   validates :meeting, presence: true, length: {minimum: 1, maximum: 50}
   
   # Select scopes, used for search
-  scope :name_keywords, ->(keywords) { where "name like ?", "#{keywords}%" }
+  scope :name_keywords, ->(keywords) { where "name like ?", "%#{keywords}%" }
 end

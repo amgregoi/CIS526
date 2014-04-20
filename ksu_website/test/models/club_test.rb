@@ -11,7 +11,7 @@ class ClubTest < ActiveSupport::TestCase
   test "Club has a valid name" do
 	test_string = ""
 	for i in 1..50
-		test_string += "a"
+	  test_string += "a"
 	end
 	assert test_string.length == 50, "Test string is not 50 characters"
 	
@@ -44,7 +44,7 @@ class ClubTest < ActiveSupport::TestCase
   test "club description length is at most 1000 characters" do
 	test_string = ""
 	for i in 1..1000
-			test_string += "a"
+	  test_string += "a"
 	end
 	assert test_string.length == 1000, "Test string is not 1000 characters"
 
@@ -67,7 +67,7 @@ class ClubTest < ActiveSupport::TestCase
   test "Club has a valid url" do
 	test_string = ""
 	for i in 1..75
-			test_string += "a"
+	  test_string += "a"
 	end
 	assert test_string.length == 75, "Test string is not 75 characters"
 
@@ -94,7 +94,7 @@ class ClubTest < ActiveSupport::TestCase
   test "club meeting length is at most 50 characters" do
 	test_string = ""
 	for i in 1..50
-			test_string += "a"
+	  test_string += "a"
 	end
 	assert test_string.length == 50, "Test string is not 50 characters"
 
@@ -113,4 +113,10 @@ class ClubTest < ActiveSupport::TestCase
   end
 
 
+# Scope Tests
+  test "club retrieved correctly from given keywords for name" do
+	assert Club.name_keywords("baseball").length == 1, "Given name_keyword 'baseball' isn't retrieved correctly"
+    assert Club.name_keywords("ball").length == 2, "Given name_keyword 'ball' isn't retrieved correctly"
+	assert Club.name_keywords("Game Programming").length == 1, "Given name_keywords 'Game Programming' isn't retrieved correctly"
+  end
 end

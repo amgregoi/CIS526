@@ -1,13 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  employer: MyString
-  job_type: Internship
+  title: key1
+  employer: key1
+  job_type: Full-Time
   description: MyString
 
 two:
-  title: MyString
-  employer: MyString
+  title: key2
+  employer: key2
   job_type: Full-Time 
+  description: MyString
+  
+three:
+  title: 12key3
+  employer: 12key3
+  job_type: Internship
+  description: MyString
+
+four:
+  title: Random
+  employer: Random
+  job_type: Faculty
   description: MyString

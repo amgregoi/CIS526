@@ -1,13 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: baseball
   description: MyString
   url: MyString
   meeting: MyString
 
 two:
-  name: MyString
+  name: Game Programming
+  description: MyString
+  url: MyString
+  meeting: MyString
+
+three:
+  name: Basketball
   description: MyString
   url: MyString
   meeting: MyString

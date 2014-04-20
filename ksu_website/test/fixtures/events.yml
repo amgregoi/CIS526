@@ -1,13 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: key1
   event_date: 2014-02-15 00:41:21
   location: MyString
   description: MyString
+  free_food: true
 
 two:
-  title: MyString
-  event_date: 2014-02-15 00:41:21
+  title: key2
+  event_date: 2014-03-15 00:41:21
   location: MyString
   description: MyString
+  free_food: true
+  
+three:
+  title: 12key3
+  event_date: 2014-02-19 00:41:21
+  location: MyString
+  description: MyString
+  free_food: false
+
+four:
+  title: random
+  event_date: 2013-02-15 00:41:21
+  location: MyString
+  description: MyString
+  free_food: false

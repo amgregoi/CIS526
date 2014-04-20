@@ -1,15 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyString
-  department: MyString
+  title: Computer Programming
+  description: There will be programming and lots of it.
+  department: CIS
   course_number: 1
   credits: 1
 
 two:
-  title: MyString
-  description: MyString
-  department: MyString
-  course_number: 1
+  title: Game Programming
+  description: We do nothing.
+  department: CIS
+  course_number: 2
   credits: 1
+
+three:
+  title: Equations
+  description: We study equations and lots of 'em.
+  department: MATH
+  course_number: 3
+  credits: 2
+
+four:
+  title: Boring
+  description: Boooooooooooooooooooorrrrrrriiiiinnnnnng...
+  department: ENGL
+  course_number: 4
+  credits: 3

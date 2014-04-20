@@ -76,7 +76,7 @@ class CourseTest < ActiveSupport::TestCase
 	assert_not course.save, "Does not contain a credits"
   end
   
-# course_number Tests
+# Course_number Tests
   test "course must have a course_number" do
     course = Course.new ({ title: "test", department: "test", description: "test", credits: 1 })
 	assert_not course.save, "Does not contain a course_number"
@@ -89,4 +89,37 @@ class CourseTest < ActiveSupport::TestCase
 	course = Course.new ({ title: "test2", department: "test2", description: "test2", credits: 2, course_number: 100 })
 	assert_not course.save, "course_number is not unique"
   end
+  
+  
+# Scope Tests
+  test "courses retrieved correctly from given keywords for title" do
+	assert Course.title_keywords("programming").length == 2, "Given title_keyword 'programming' isn't retrieved correctly"
+    assert Course.title_keywords("equations").length == 1, "Given title_keyword 'equations' isn't retrieved correctly"
+	assert Course.title_keywords("BoRinG").length == 1, "Given title_keyword 'BoRinG' isn't retrieved correctly"
+  end
+  
+  test "courses retrieved correctly from given keywords for description" do
+	assert Course.description_keywords("programming").length == 1, "Given description_keywords 'programming' isn't retrieved correctly"
+    assert Course.description_keywords("lots of").length == 2, "Given description_keywords 'lots of' isn't retrieved correctly"
+	assert Course.description_keywords("study").length == 1, "Given description_keywords 'study' isn't retrieved correctly"
+  end
+  
+  test "courses retrieved correctly from given keywords for title and description combined" do
+	assert Course.keywords("programming").length == 2, "Given keywords 'programming' isn't retrieved correctly"
+    assert Course.keywords("lots of").length == 2, "Given keywords 'lots of' isn't retrieved correctly"
+	assert Course.keywords("game").length == 1, "Given keywords 'game' isn't retrieved correctly"
+  end
+  
+  test "courses retrieved correctly from given department" do
+	assert Course.department("MATH").length == 1, "Given department 'MATH' isn't retrieved correctly"
+    assert Course.department("CIS").length == 2, "Given department 'CIS' isn't retrieved correctly"
+	assert Course.department("ENGL").length == 1, "Given department 'ENGL' isn't retrieved correctly"
+  end
+  
+  test "courses retrieved correctly from given course number" do
+	assert Course.course_num(1).length == 1, "Given course_num '1' isn't retrieved correctly"
+    assert Course.course_num(2).length == 1, "Given course_num '2' isn't retrieved correctly"
+	assert Course.course_num(70).length == 0, "Given course_num '70' isn't retrieved correctly"
+  end
+  
 end

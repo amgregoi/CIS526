@@ -4,12 +4,12 @@ one:
   name: MyString
   title: MyString
   office: MyString
-  phone_number: MyString
+  phone_number: 1234445555
   email: MyString
 
 two:
   name: MyString
   title: MyString
   office: MyString
-  phone_number: MyString
+  phone_number: 1234446666
   email: MyString
