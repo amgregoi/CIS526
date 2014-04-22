@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -13,3 +14,20 @@ two:
   office: MyString
   phone_number: MyString
   email: MyString
+=======
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  title: MyString
+  office: MyString
+  phone_number: 1234445555
+  email: MyString
+
+two:
+  name: MyString
+  title: MyString
+  office: MyString
+  phone_number: 1234446666
+  email: MyString
+>>>>>>> db91569a3da8fccb3d065166097d62b3130c362a

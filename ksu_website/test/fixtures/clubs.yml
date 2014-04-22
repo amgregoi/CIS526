@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -11,3 +12,24 @@ two:
   description: MyString
   url: MyString
   meeting: MyString
+=======
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: baseball
+  description: MyString
+  url: MyString
+  meeting: MyString
+
+two:
+  name: Game Programming
+  description: MyString
+  url: MyString
+  meeting: MyString
+
+three:
+  name: Basketball
+  description: MyString
+  url: MyString
+  meeting: MyString
+>>>>>>> db91569a3da8fccb3d065166097d62b3130c362a

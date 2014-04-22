@@ -15,3 +15,4 @@ class Employment < ActiveRecord::Base
   scope :job_type_select, ->(type) { where job_type: type }
   
 end
+

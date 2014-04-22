@@ -9,3 +9,4 @@ class Club < ActiveRecord::Base
   # Select scopes, used for search
   scope :name_keywords, ->(keywords) { where "name like ?", "#{keywords}%" }
 end
+

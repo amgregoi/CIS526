@@ -15,3 +15,5 @@ class Course < ActiveRecord::Base
   scope :title_keywords, ->(keywords) { where "title like ?", "#{keywords}%" }
   scope :description_keywords, ->(keywords) { where "description like ?", "#{keywords}%" }
 end
+
+

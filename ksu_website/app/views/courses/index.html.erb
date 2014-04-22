@@ -3,22 +3,23 @@
 <%=render "/layouts/header" %>
 </head>
 <body>
+<div id="main">
 <br><br>
-<div class="panel-group" id="accordion">
-	<% for course in Course.all %>
-		<div class="panel panel-default">
-			<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=course.course_number%>">
-				<div class="panel-title">
-					<h4>
-						<%= course.title%>
-					</h4>
+	<div class="panel-group" id="accordion">
+		<% for course in Course.all %>
+			<div class="panel panel-default">
+				<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=course.course_number%>">
+					<div class="panel-title">
+						<h4>
+							<%= course.title%>
+						</h4>
+					</div>
 				</div>
-			</div>
-			<div id="<%=course.course_number%>" class="panel-collapse collapse in">
-				<div class="panel-body"> <%= course.description %> </div>
-			</div>
-	<% end %>
-</div>
- 
+				<div id="<%=course.course_number%>" class="panel-collapse collapse in">
+					<div class="panel-body"> <%= course.description %> </div>
+				</div>
+		<% end %>
+	</div>
+ </div>
 </body>
 </html>

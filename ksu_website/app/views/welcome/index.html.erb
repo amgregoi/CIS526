@@ -60,12 +60,12 @@
 							  </tr>
 							</thead>
 							<tbody id="tableBody">
-							<% for event in Event.all %>
+							<% for employment in Employment.all %>
 							  <tr>
 								<td>
-									<h4><%= event.title%></h2>
-									<%= event.description%><br>
-									<%= event.event_date%>
+									<h4><%= employment.title%></h2>
+									<%= employment.description%><br>
+									<%= employment.job_type%>
 								</td>
 							  </tr>
 							 <%end%>

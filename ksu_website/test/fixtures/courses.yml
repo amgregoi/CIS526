@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -13,3 +14,34 @@ two:
   department: MyString
   course_number: 1
   credits: 1
+=======
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Computer Programming
+  description: There will be programming and lots of it.
+  department: CIS
+  course_number: 1
+  credits: 1
+
+two:
+  title: Game Programming
+  description: We do nothing.
+  department: CIS
+  course_number: 2
+  credits: 1
+
+three:
+  title: Equations
+  description: We study equations and lots of 'em.
+  department: MATH
+  course_number: 3
+  credits: 2
+
+four:
+  title: Boring
+  description: Boooooooooooooooooooorrrrrrriiiiinnnnnng...
+  department: ENGL
+  course_number: 4
+  credits: 3
+>>>>>>> db91569a3da8fccb3d065166097d62b3130c362a
