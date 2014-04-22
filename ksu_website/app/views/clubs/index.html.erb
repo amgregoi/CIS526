@@ -4,15 +4,21 @@
 </head>
 <body>
 <div id="main">
+	<h3>Search</h3>
+	<%= form_tag clubs_path, method: "get" do %>
+	  <%= label_tag("Name: ") %> <%= text_field_tag :name_keywords %> <br/>
+	  <%= submit_tag "Enter" %>
+	<% end %>
 	<br><br>
+	
 	<div class="panel-group" id="accordion">
-		<% for club in Club.all %>
+		<% for club in @clubs %>
 			<div class="panel panel-default">
 				<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=club.name.delete(' ')%>">
 					<div class="panel-title">
-						<h4>
+						<h3>
 							<%= club.name%>
-						</h4>
+						</h3>
 					</div>
 				</div>
 				<div id="<%club.name.delete(' ')%>" class="panel-collapse collapse in">
@@ -21,9 +27,6 @@
 		<% end %>
 	</div>
 		
-
-
-	</div>
 </div>
  
 </body>

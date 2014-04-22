@@ -2,59 +2,35 @@
 <head>
 <%=render "/layouts/header" %>
 </head>
-
 <body>
-<div id="main">	
-			<div id="vmenu"> 
-				<ul> 
-				  <li>
-				    <h3>Search</h3>
-					<%= form_tag events_path, method: "get" do %>
-					  <%= label_tag("Title: ") %> <%= text_field_tag :keywords %> <br/>
-					  <%= date_select(:chosen_date, "date", :discard_day => true) %> <br/>
-					  <%= label_tag("Free Food:") %> <%= check_box_tag :free_food_select %> <br/>
-					  <%= submit_tag "Enter" %>
-					<% end %>
-				  </li> 
-				</ul>   
-			</div>
-			<div id="main_body">
-				<h1>Listing events</h1>
-				
-				<table>
-				  <thead>
-					<tr>
-					  <th>Title</th>
-					  <th>Event date</th>
-					  <th>Location</th>
-					  <th>Description</th>
-					  <th></th>
-					  <th></th>
-					  <th></th>
-					</tr>
-				  </thead>
-
-				  <tbody>
-					<% @events.each do |event| %>
-					  <tr>
-						<td><%= event.title %></td>
-						<td><%= event.event_date %></td>
-						<td><%= event.location %></td>
-						<td><%= event.description %></td>
-						<td><%= link_to 'Show', event %></td>
-						<td><%= link_to 'Edit', edit_event_path(event) %></td>
-						<td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-					  </tr>
-					<% end %>
-				  </tbody>
-				</table>
-
-				<br>
-				<%= link_to 'New Event', new_event_path %>
-
-			</div>
-		</div> 
+<div id="main">
+	<h3>Search</h3>
+	<%= form_tag events_path, method: "get" do %>
+	  <%= label_tag("Title: ") %> <%= text_field_tag :title_keywords %> <br/>
+	  <%= date_select(:chosen_date, "date", :discard_day => true) %> <br/>
+	  <%= label_tag("Free Food:") %> <%= check_box_tag :free_food_select %> <br/>
+	  <%= submit_tag "Enter" %>
+	<% end %>
+	<br><br>
+	
+	<div class="panel-group" id="accordion">
+		<% for event in @events %>
+			<div class="panel panel-default">
+				<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=event.title.delete(' ')%>">
+					<div class="panel-title">
+						<h3>
+							<%= event.event_date.strftime("%B %d, %Y")%> - <%= event.title%>
+						</h3>
+					</div>
+				</div>
+				<div id="<%event.title.delete(' ')%>" class="panel-collapse collapse in">
+					<div class="panel-body"> <i>Location: </i> <%= event.location %> </div> <br/>
+					<div class="panel-body"> <i>Description: </i> <%= event.description %> </div>
+				</div>
+		<% end %>
 	</div>
+		
 </div>
+ 
 </body>
 </html>

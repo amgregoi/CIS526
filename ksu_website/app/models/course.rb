@@ -12,8 +12,8 @@ class Course < ActiveRecord::Base
   scope :department, ->(depmt) { where department: depmt }
   scope :course_num, ->(course_num) { where course_number: course_num }
   
-  scope :title_keywords, ->(keywords) { where "title like ?", "#{keywords}%" }
-  scope :description_keywords, ->(keywords) { where "description like ?", "#{keywords}%" }
+  scope :title_keywords, ->(keywords) { where "title like ?", "%#{keywords}%" }
+  scope :description_keywords, ->(keywords) { where "description like ?", "%#{keywords}%" }
 end
 
 

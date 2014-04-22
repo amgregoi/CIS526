@@ -10,8 +10,8 @@ class Employment < ActiveRecord::Base
   validates :description, presence: true, length: {minimum: 1, maximum: 2000}
   
   # Select scopes, used for searching  
-  scope :title_keywords, ->(keywords) { where "title like ?", "#{keywords}%" }
-  scope :employer_keywords, ->(keywords) { where "employer like ?", "#{keywords}%" }
+  scope :title_keywords, ->(keywords) { where "title like ?", "%#{keywords}%" }
+  scope :employer_keywords, ->(keywords) { where "employer like ?", "%#{keywords}%" }
   scope :job_type_select, ->(type) { where job_type: type }
   
 end

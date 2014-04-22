@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  title: MyString
-  employer: MyString
-  job_type: Internship
-  description: MyString
-
-two:
-  title: MyString
-  employer: MyString
-  job_type: Full-Time 
-  description: MyString
-=======
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   title: key1
   employer: key1
@@ -38,4 +21,3 @@ four:
   employer: Random
   job_type: Faculty
   description: MyString
->>>>>>> db91569a3da8fccb3d065166097d62b3130c362a

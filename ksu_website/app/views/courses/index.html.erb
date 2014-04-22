@@ -4,19 +4,29 @@
 </head>
 <body>
 <div id="main">
+
+<h3>Search</h3>
+<%= form_tag courses_path, method: "get" do %>
+  <%= label_tag("Keywords: ") %><%= text_field_tag :keywords %> <br/>
+  <%= label_tag("Department: ") %> <%= text_field_tag :department %> <br/>
+  <%= label_tag("Course #: ") %> <%= text_field_tag :course_num %> <br/>
+  <%= submit_tag "Enter" %>
+<% end %>
+
 <br><br>
 	<div class="panel-group" id="accordion">
-		<% for course in Course.all %>
+		<% for course in @courses %>
 			<div class="panel panel-default">
 				<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=course.course_number%>">
 					<div class="panel-title">
-						<h4>
-							<%= course.title%>
-						</h4>
+						<h3>
+							<%= course.department%> <%= course.course_number%> - <%= course.title%>
+						</h3>
 					</div>
 				</div>
 				<div id="<%=course.course_number%>" class="panel-collapse collapse in">
-					<div class="panel-body"> <%= course.description %> </div>
+					<div class="panel-body"> <i>Description: </i> <%= course.description %> </div> <br/>
+					<div class="panel-body"> <i>Credits: </i> <%= course.credits %> </div>
 				</div>
 		<% end %>
 	</div>
