@@ -1,5 +1,11 @@
 KsuWebsite::Application.routes.draw do
-  get "users/new"
+  get "sessions/new"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
+    
+  resources :users
+  resources :sessions
   resources :courses
   resources :employments
   resources :faculties
@@ -12,7 +18,7 @@ KsuWebsite::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
 
-   get '/clubs/list', to: 'clubs#list'
+   get '/football', to: 'clubs#show#1'
    get '/welcome', to: 'welcome#index'
    get '/about', to: 'about#index'
    get '/courses', to: 'courses#index'
