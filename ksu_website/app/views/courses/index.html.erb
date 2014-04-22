@@ -1,45 +1,24 @@
+<html>
+<head>
 <%=render "/layouts/header" %>
-
-<h1>Listing courses</h1>
-
-<h3>Search</h3>
-<%= form_tag courses_path, method: "get" do %>
-  <%= label_tag("Keywords: ") %><%= text_field_tag :keywords %> <br/>
-  <%= label_tag("Department: ") %> <%= text_field_tag :department %> <br/>
-  <%= label_tag("Course #: ") %> <%= text_field_tag :course_num %> <br/>
-  <%= submit_tag "Enter" %>
-<% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Department</th>
-      <th>Course number</th>
-      <th>Credits</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @courses.each do |course| %>
-      <tr>
-        <td><%= course.title %></td>
-        <td><%= course.description %></td>
-        <td><%= course.department %></td>
-        <td><%= course.course_number %></td>
-        <td><%= course.credits %></td>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Course', new_course_path %>
+</head>
+<body>
+<br><br>
+<div class="panel-group" id="accordion">
+	<% for course in Course.all %>
+		<div class="panel panel-default">
+			<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=course.course_number%>">
+				<div class="panel-title">
+					<h4>
+						<%= course.title%>
+					</h4>
+				</div>
+			</div>
+			<div id="<%=course.course_number%>" class="panel-collapse collapse in">
+				<div class="panel-body"> <%= course.description %> </div>
+			</div>
+	<% end %>
+</div>
+ 
+</body>
+</html>

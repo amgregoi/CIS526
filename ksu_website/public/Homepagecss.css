@@ -14,15 +14,18 @@
 		height: 36px;
 		background-color: #512888;
 		border-bottom: 5px solid #ECD391;
-}
+		align-items:center;
+		}
 
 			.navbar {
-				height: 36px;
 				padding: 0;
+				padding-left: 20%;
 				margin: 0;
 				position: relative; /* Ensures that the menu doesn’t affect other elements */
 				float:center;
 				min-width:600px;
+				
+				
 				}
 				
 				.navbar li {
@@ -43,14 +46,9 @@
 					display: block; }
 
 				.navbar li:hover, a:hover { background-color: #5D478B;
+					height: 1px;
 					display:block;}
 
-				.navbar li ul {
-					display: none; /* Hides the drop-down menu */
-					height: auto;
-					margin: 0; /* Aligns drop-down box underneath the menu item */
-					padding: 0; /* Aligns drop-down box underneath the menu item */ 
-				}
 
 
 
@@ -122,12 +120,31 @@
 		background: linear-gradient(to bottom, #4F2684 0%, #7137BD 100%) repeat scroll 0% 0% transparent;
 	}
 	#header-logo{
+		padding-left:20%;
+		padding-top: 10px;
 		height: 80px;
 		color: #512888;
 		text-decoration: none;
 		margin: -10px 0px 0px 0px;
-		padding:5px;
-		
 	}
-		
 
+#main{
+		padding-left:20%;
+		float:left;
+		
+}
+
+#main #event_table{
+	border-radius:25px;
+	width: 355px;
+	border-style:solid;
+	border-width: 1px;
+}
+
+#main #event_table2{
+	border-radius:25px;
+	width: 355px;
+	border-style:solid;
+	border-width: 1px;
+	margin-left:15px;
+}

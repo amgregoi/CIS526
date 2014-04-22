@@ -4,21 +4,30 @@
 </head>
 <body>
 <br><br>
-<div class="panel-group" id="accordion">
-	<% for club in Club.all %>
-		<div class="panel panel-default">
-			<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=club.name%>">
-				<div class="panel-title">
-					<h4>
-						<a href="#"> <%= club.name%></a>
-					</h4>
-				</div>
+
+
+
+<div class="panel-group" id="accordian2">
+	<%for c in Club.all%>
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordian2" href="<%= c.name%>">
+					<%=c.name%>
+				</a>
+			</h4>
+		</div>
+		
+		<div id="<%=c.name%>" class="panel-collapse collapse in">
+			<div class="panel-body">
+			<%=c.description%>
 			</div>
-			<div id="<%=club.name%>" class="panel-collapse collapse in">
-				<div class="panel-body"> <%= club.description %> </div>
-			</div>
-	<% end %>
+		</div>
+	<%end%>
+	
+
+
 </div>
+
  
 </body>
 </html>

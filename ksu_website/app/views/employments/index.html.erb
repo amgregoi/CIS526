@@ -1,46 +1,39 @@
+<html>
+<head>
 <%=render "/layouts/header" %>
+<link rel=stylesheet type="text/css" href="/public/employment.css">
 
-<h1>Listing Employments</h1>
-
-<h3>Search</h3>
-<%= form_tag employments_path, method: "get" do %>
-  <%= label_tag("Job Title: ") %> 
-    <%= text_field_tag :title_keywords %> <br/>
-  <%= label_tag("Employer: ") %> 
-    <%= text_field_tag :employer_keywords %> <br/>
-  <%= label_tag("Employment Type: ") %> 
-    <%= select_tag :job_type_select, options_for_select(Employment::JOB_TYPE_SELECTIONS.collect{ |j| [j, j] }) %> <br/>
-  <%= submit_tag "Enter" %>
-<% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Employer</th>
-      <th>Job Type</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @employments.each do |employment| %>
-      <tr>
-        <td><%= employment.title %></td>
-        <td><%= employment.employer %></td>
-        <td><%= employment.job_type %></td>
-        <td><%= employment.description %></td>
-        <td><%= link_to 'Show', employment %></td>
-        <td><%= link_to 'Edit', edit_employment_path(employment) %></td>
-        <td><%= link_to 'Destroy', employment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Employment', new_employment_path %>
+</head>
+<body>
+<br><br>
+<ul class="thumbnails">
+	<li style="width: 300px; height: 400px;">
+		<div class="thumbnail">
+			<img alt="300x200" style="width: 300px; height: 200px;" src="temp-pic.jpg"></img>
+			<div class="caption">
+				<h3>
+					Thumbnail label
+				</h3>
+				<p>
+					Cras justo odio, dapibus ac facilisis in, egestas
+				</p>
+			</div>
+		</div>
+	</li>
+	<li style="width: 300px; height: 400px;">
+		<div class="thumbnail">
+			<img alt="300x200" style="width: 300px; height: 200px;" src="temp-pic.jpg"></img>
+			<div class="caption">
+				<h3>
+					Thumbnail label
+				</h3>
+				<p>
+					Cras justo odio, dapibus ac facilisis in, egestas
+				</p>
+			</div>
+		</div>
+	</li>
+</ul>
+ 
+</body>
+</html>
