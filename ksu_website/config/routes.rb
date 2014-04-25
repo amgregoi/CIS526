@@ -18,7 +18,6 @@ KsuWebsite::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
 
-   get '/football', to: 'clubs#show#1'
    get '/welcome', to: 'welcome#index'
    get '/about', to: 'about#index'
    get '/courses', to: 'courses#index'
