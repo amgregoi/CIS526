@@ -1,0 +1,46 @@
+<html>
+<head>
+  <%=render "/layouts/header" %>
+</head>
+<body>
+
+<h1>Listing Courses</h1>
+
+<h3>Search</h3>
+<%= form_tag courses_path, method: "get" do %>
+  <%= label_tag("Keywords: ") %><%= text_field_tag :keywords %> <br/>
+  <%= label_tag("Department: ") %> <%= text_field_tag :department %> <br/>
+  <%= label_tag("Course #: ") %> <%= text_field_tag :course_num %> <br/>
+  <%= submit_tag "Enter" %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      
+      <th>Course</th>
+	  <th>Title</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.department course.course_number %></td>
+        <td><%= course.title %></td>
+        <td><%= link_to 'Show', admin_course_path(course) %></td>
+        <td><%= link_to 'Edit', edit_admin_course_path(course) %></td>
+        <td><%= link_to 'Destroy', admin_course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Course', new_admin_course_path %>
+
+</body>
+</html>

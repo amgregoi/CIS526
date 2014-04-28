@@ -1,0 +1,47 @@
+<html>
+<head>
+  <%=render "/layouts/header" %>
+</head>
+<body>
+
+<h1>Listing Events</h1>
+
+<h3>Search</h3>
+<%= form_tag events_path, method: "get" do %>
+  <%= label_tag("Title: ") %> <%= text_field_tag :title_keywords %> <br/>
+  <%= date_select(:chosen_date, "date", :discard_day => true) %> <br/>
+  <%= label_tag("Free Food:") %> <%= check_box_tag :free_food_select %> <br/>
+  <%= submit_tag "Enter" %>
+<% end %>
+<br><br>
+	
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= link_to 'Show', admin_event_path(event) %></td>
+        <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
+        <td><%= link_to 'Destroy', admin_event_path(event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_admin_event_path %>
+
+</body>
+</html>

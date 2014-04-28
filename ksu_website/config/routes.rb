@@ -1,4 +1,5 @@
 KsuWebsite::Application.routes.draw do
+  get "dashboard/index"
   get "sessions/new"
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
@@ -6,11 +7,20 @@ KsuWebsite::Application.routes.draw do
     
   resources :users
   resources :sessions
-  resources :courses
-  resources :employments
-  resources :faculties
-  resources :clubs
-  resources :events
+  resources :courses, only: [:index]
+  resources :employments, only: [:index]
+  resources :faculties, only: [:index]
+  resources :clubs, only: [:index]
+  resources :events, only: [:index]
+  
+  namespace :admin do 
+    get '', to: 'dashboard#index', as: '/' 
+	resources :courses
+    resources :employments
+    resources :faculties
+    resources :clubs
+    resources :events
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
