@@ -28,7 +28,7 @@ class Admin::ClubsController < AdminController
 
     respond_to do |format|
       if @club.save
-        format.html { redirect_to @club, notice: 'Club was successfully created.' }
+        format.html { redirect_to admin_club_path(@club), notice: 'Club was successfully created.' }
         format.json { render action: 'show', status: :created, location: @club }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class Admin::ClubsController < AdminController
   def update
     respond_to do |format|
       if @club.update(club_params)
-        format.html { redirect_to @club, notice: 'Club was successfully updated.' }
+        format.html { redirect_to admin_club_path(@club), notice: 'Club was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +56,7 @@ class Admin::ClubsController < AdminController
   def destroy
     @club.destroy
     respond_to do |format|
-      format.html { redirect_to clubs_url }
+      format.html { redirect_to admin_clubs_url }
       format.json { head :no_content }
     end
   end

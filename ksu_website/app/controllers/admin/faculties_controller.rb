@@ -28,7 +28,7 @@ class Admin::FacultiesController < AdminController
 
     respond_to do |format|
       if @faculty.save
-        format.html { redirect_to @faculty, notice: 'Faculty was successfully created.' }
+        format.html { redirect_to admin_faculty_path(@faculty), notice: 'Faculty was successfully created.' }
         format.json { render action: 'show', status: :created, location: @faculty }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class Admin::FacultiesController < AdminController
   def update
     respond_to do |format|
       if @faculty.update(faculty_params)
-        format.html { redirect_to @faculty, notice: 'Faculty was successfully updated.' }
+        format.html { redirect_to admin_faculty_path(@faculty), notice: 'Faculty was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +56,7 @@ class Admin::FacultiesController < AdminController
   def destroy
     @faculty.destroy
     respond_to do |format|
-      format.html { redirect_to faculties_url }
+      format.html { redirect_to admin_faculties_url }
       format.json { head :no_content }
     end
   end
