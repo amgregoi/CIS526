@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# There should only be the index route for non-admin controller
 class EventsControllerTest < ActionController::TestCase
   setup do
     @event = events(:one)
@@ -11,39 +12,40 @@ class EventsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:events)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
+  test "should not get new" do
+    assert_raises(ActionController::UrlGenerationError) do
+      get :new
+    end
   end
 
-  test "should create event" do
-    assert_difference('Event.count') do
+  test "should not create event" do
+    assert_raises(ActionController::UrlGenerationError) do
       post :create, event: { description: @event.description, event_date: @event.event_date, location: @event.location, title: @event.title }
     end
-
-    assert_redirected_to event_path(assigns(:event))
   end
 
-  test "should show event" do
-    get :show, id: @event
-    assert_response :success
+  test "should not show event" do
+    assert_raises(ActionController::UrlGenerationError) do
+      get :show, id: @event
+    end
   end
 
-  test "should get edit" do
-    get :edit, id: @event
-    assert_response :success
+  test "should not get edit" do
+    assert_raises(ActionController::UrlGenerationError) do
+      get :edit, id: @event
+    end
   end
 
-  test "should update event" do
-    patch :update, id: @event, event: { description: @event.description, event_date: @event.event_date, location: @event.location, title: @event.title }
-    assert_redirected_to event_path(assigns(:event))
+  test "should not update event" do
+    assert_raises(ActionController::UrlGenerationError) do
+      patch :update, id: @event, event: { description: @event.description, event_date: @event.event_date, location: @event.location, title: @event.title }
+    end
   end
 
-  test "should destroy event" do
-    assert_difference('Event.count', -1) do
+  test "should not destroy event" do
+    assert_raises(ActionController::UrlGenerationError) do
       delete :destroy, id: @event
     end
-
-    assert_redirected_to events_path
   end
+  
 end

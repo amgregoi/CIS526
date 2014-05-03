@@ -1,5 +1,6 @@
 require 'test_helper'
 
+# There should only be the index route for non-admin controller
 class FacultiesControllerTest < ActionController::TestCase
   setup do
     @faculty = faculties(:one)
@@ -11,39 +12,40 @@ class FacultiesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:faculties)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
+  test "should not get new" do
+    assert_raises(ActionController::UrlGenerationError) do
+      get :new
+    end
   end
 
-  test "should create faculty" do
-    assert_difference('Faculty.count') do
+  test "should not create faculty" do
+    assert_raises(ActionController::UrlGenerationError) do
       post :create, faculty: { email: @faculty.email, name: @faculty.name + "unique", office: @faculty.office, phone_number: @faculty.phone_number, title: @faculty.title }
     end
-
-    assert_redirected_to faculty_path(assigns(:faculty))
   end
 
-  test "should show faculty" do
-    get :show, id: @faculty
-    assert_response :success
+  test "should not show faculty" do
+    assert_raises(ActionController::UrlGenerationError) do
+      get :show, id: @faculty
+    end
   end
 
-  test "should get edit" do
-    get :edit, id: @faculty
-    assert_response :success
+  test "should not get edit" do
+    assert_raises(ActionController::UrlGenerationError) do
+      get :edit, id: @faculty
+    end
   end
 
-  test "should update faculty" do
-    patch :update, id: @faculty, faculty: { email: @faculty.email, name: @faculty.name + "unique", office: @faculty.office, phone_number: @faculty.phone_number, title: @faculty.title }
-    assert_redirected_to faculty_path(assigns(:faculty))
+  test "should not update faculty" do
+    assert_raises(ActionController::UrlGenerationError) do
+      patch :update, id: @faculty, faculty: { email: @faculty.email, name: @faculty.name + "unique", office: @faculty.office, phone_number: @faculty.phone_number, title: @faculty.title }
+    end
   end
 
-  test "should destroy faculty" do
-    assert_difference('Faculty.count', -1) do
+  test "should not destroy faculty" do
+    assert_raises(ActionController::UrlGenerationError) do
       delete :destroy, id: @faculty
     end
-
-    assert_redirected_to faculties_path
   end
+  
 end

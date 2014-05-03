@@ -28,7 +28,7 @@ class Admin::EmploymentsController < AdminController
 
     respond_to do |format|
       if @employment.save
-        format.html { redirect_to @employment, notice: 'Employment was successfully created.' }
+        format.html { redirect_to admin_employment_path(@employment), notice: 'Employment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @employment }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class Admin::EmploymentsController < AdminController
   def update
     respond_to do |format|
       if @employment.update(employment_params)
-        format.html { redirect_to @employment, notice: 'Employment was successfully updated.' }
+        format.html { redirect_to admin_employment_path(@employment), notice: 'Employment was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +56,7 @@ class Admin::EmploymentsController < AdminController
   def destroy
     @employment.destroy
     respond_to do |format|
-      format.html { redirect_to employments_url }
+      format.html { redirect_to admin_employments_url }
       format.json { head :no_content }
     end
   end
