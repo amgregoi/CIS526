@@ -3,6 +3,14 @@ require 'test_helper'
 class Admin::ClubsControllerTest < ActionController::TestCase
   setup do
     @club = clubs(:one)
+	# Sign in as admin so tests have access to pages
+	#@admin_user = User.create ({ email: "adminuser@email.com", password: "adminpassword", admin: true })
+	#post :create, session: { email: @admin_user.email, password: "adminpassword" }
+  end
+  
+  teardown do
+    #delete :destroy, id: @admin_user
+    #@admin_user = nil
   end
 
   test "should get index" do

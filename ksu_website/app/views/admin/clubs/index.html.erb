@@ -1,48 +1,50 @@
 <html>
 <head>
-  <%=render "/layouts/header" %>
+<%=render "/layouts/header" %>
 </head>
 <body>
+<div id="main">
 
-<h1>Listing Clubs</h1>
+  <h1>Listing Clubs</h1>
 
-<h3>Search</h3>
-<%= form_tag admin_clubs_path, method: "get" do %>
-  <%= label_tag("Name: ") %> <%= text_field_tag :name_keywords %> <br/>
-  <%= submit_tag "Enter" %>
-<% end %>
+  <h3>Search</h3>
+  <%= form_tag admin_clubs_path, method: "get" do %>
+    <%= label_tag("Name: ") %> <%= text_field_tag :name_keywords %> <br/>
+    <%= submit_tag "Enter" %>
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Url</th>
-      <th>Meeting</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clubs.each do |club| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= club.name %></td>
-        <td><%= club.description %></td>
-        <td><%= club.url %></td>
-        <td><%= club.meeting %></td>
-        <td><%= link_to 'Show', admin_club_path(club) %></td>
-        <td><%= link_to 'Edit', edit_admin_club_path(club) %></td>
-        <td><%= link_to 'Destroy', admin_club_path(club), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Url</th>
+        <th>Meeting</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @clubs.each do |club| %>
+        <tr>
+          <td><%= club.name %></td>
+          <td><%= club.description %></td>
+          <td><%= club.url %></td>
+          <td><%= club.meeting %></td>
+          <td><%= link_to 'Show', admin_club_path(club) %></td>
+          <td><%= link_to 'Edit', edit_admin_club_path(club) %></td>
+          <td><%= link_to 'Destroy', admin_club_path(club), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Club', new_admin_club_path %>
+  <br/>
 
+  <%= link_to 'New Club', new_admin_club_path %>
+
+</div>
 </body>
 </html>

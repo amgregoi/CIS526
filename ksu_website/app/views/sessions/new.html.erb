@@ -1,14 +1,26 @@
-<h1>Log in</h1>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<%= form_tag sessions_path do %>
-  <p>
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email, params[:email] %>
-  </p>
-  <p>
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </p>
-  <p class="button"><%= submit_tag "Log in" %></p>
-<% end %>
+  <h1>Log in</h1>
 
+  <%= form_tag login_path do %>
+    <p>
+      <%= label_tag :email %><br />
+      <%= text_field_tag :email, params[:email] %>
+    </p>
+    <p>
+      <%= label_tag :password %><br />
+      <%= password_field_tag :password %>
+    </p>
+    <p class="button"><%= submit_tag "Log in" %></p>
+  <% end %>
+
+  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+
+</div>
+</body>
+</html>
