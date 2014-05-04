@@ -1,7 +1,8 @@
 KsuWebsite::Application.routes.draw do
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
-  get "signup" => "users#new", :as => "signup"   
+  get "signup" => "users#new", :as => "signup"  
+  resources :sessions, only: [:create]  
   resources :users, only: [:create]
   
   resources :courses, only: [:index]
