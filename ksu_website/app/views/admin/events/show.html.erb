@@ -1,29 +1,40 @@
-<p id="notice"><%= notice %></p>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Event date:</strong>
-  <%= @event.event_date %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @event.title %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
+  <p>
+    <strong>Event date:</strong>
+    <%= @event.event_date %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @event.location %>
+  </p>
 
-<p>
-  <strong>Free Food:</strong>
-  <%= @event.free_food %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @event.description %>
+  </p>
 
-<%= link_to 'Edit', edit_admin_event_path(@event) %> |
-<%= link_to 'Back', admin_events_path %>
+  <p>
+    <strong>Free Food:</strong>
+    <%= @event.free_food %>
+  </p>
+
+  <%= link_to 'Edit', edit_admin_event_path(@event) %> |
+  <%= link_to 'Back', admin_events_path %>
+
+</div>
+</body>
+</html>

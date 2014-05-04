@@ -1,6 +1,17 @@
-<h1>Editing club</h1>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<%= render 'form' %>
+  <h1>Editing club</h1>
 
-<%= link_to 'Show', admin_clubs_path(@club) %> |
-<%= link_to 'Back', admin_clubs_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Show', admin_club_path(@club) %> |
+  <%= link_to 'Back', admin_clubs_path %>
+  
+</div>
+</body>
+</html>

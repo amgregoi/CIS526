@@ -1,29 +1,40 @@
-<p id="notice"><%= notice %></p>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @course.title %>
+  </p>
 
-<p>
-  <strong>Department:</strong>
-  <%= @course.department %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @course.description %>
+  </p>
 
-<p>
-  <strong>Course number:</strong>
-  <%= @course.course_number %>
-</p>
+  <p>
+    <strong>Department:</strong>
+    <%= @course.department %>
+  </p>
 
-<p>
-  <strong>Credits:</strong>
-  <%= @course.credits %>
-</p>
+  <p>
+    <strong>Course number:</strong>
+    <%= @course.course_number %>
+  </p>
 
-<%= link_to 'Edit', edit_admin_course_path(@course) %> |
-<%= link_to 'Back', admin_courses_path %>
+  <p>
+    <strong>Credits:</strong>
+    <%= @course.credits %>
+  </p>
+
+  <%= link_to 'Edit', edit_admin_course_path(@course) %> |
+  <%= link_to 'Back', admin_courses_path %>
+
+</div>
+</body>
+</html>

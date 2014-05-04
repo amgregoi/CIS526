@@ -1,24 +1,35 @@
-<p id="notice"><%= notice %></p>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<p>
-  <strong>Title:</strong>
-  <%= @employment.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Employer:</strong>
-  <%= @employment.employer %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @employment.title %>
+  </p>
 
-<p>
-  <strong>Job Type:</strong>
-  <%= @employment.job_type %>
-</p>
+  <p>
+    <strong>Employer:</strong>
+    <%= @employment.employer %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @employment.description %>
-</p>
+  <p>
+    <strong>Job Type:</strong>
+    <%= @employment.job_type %>
+  </p>
 
-<%= link_to 'Edit', edit_admin_employment_path(@employment) %> |
-<%= link_to 'Back', admin_employments_path %>
+  <p>
+    <strong>Description:</strong>
+    <%= @employment.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_admin_employment_path(@employment) %> |
+  <%= link_to 'Back', admin_employments_path %>
+
+</div>
+</body>
+</html>

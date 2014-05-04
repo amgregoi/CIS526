@@ -1,24 +1,35 @@
-<p id="notice"><%= notice %></p>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<p>
-  <strong>Name:</strong>
-  <%= @club.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @club.description %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @club.name %>
+  </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @club.url %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @club.description %>
+  </p>
 
-<p>
-  <strong>Meeting:</strong>
-  <%= @club.meeting %>
-</p>
+  <p>
+    <strong>Url:</strong>
+    <%= @club.url %>
+  </p>
 
-<%= link_to 'Edit', edit_admin_club_path(@club) %> |
-<%= link_to 'Back', admin_clubs_path %>
+  <p>
+    <strong>Meeting:</strong>
+    <%= @club.meeting %>
+  </p>
+
+  <%= link_to 'Edit', edit_admin_club_path(@club) %> |
+  <%= link_to 'Back', admin_clubs_path %>
+  
+</div>
+</body>
+</html>

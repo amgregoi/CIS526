@@ -1,6 +1,17 @@
-<h1>Editing event</h1>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<%= render 'form' %>
+  <h1>Editing event</h1>
 
-<%= link_to 'Show', admin_event_path(@event) %> |
-<%= link_to 'Back', admin_events_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Show', admin_event_path(@event) %> |
+  <%= link_to 'Back', admin_events_path %>
+
+</div>
+</body>
+</html>

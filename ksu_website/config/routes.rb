@@ -20,6 +20,7 @@ KsuWebsite::Application.routes.draw do
     resources :faculties
     resources :clubs
     resources :events
+	resources :users
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,6 +1,17 @@
-<h1>Editing employment</h1>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<%= render 'form' %>
+  <h1>Editing employment</h1>
 
-<%= link_to 'Show', admin_employment_path(@employment) %> |
-<%= link_to 'Back', admin_employments_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Show', admin_employment_path(@employment) %> |
+  <%= link_to 'Back', admin_employments_path %>
+
+</div>
+</body>
+</html>
