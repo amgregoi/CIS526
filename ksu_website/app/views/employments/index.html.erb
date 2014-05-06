@@ -22,14 +22,14 @@
 	<div class="panel-group" id="accordion">
 		<% for employment in @employments %>
 			<div class="panel panel-default">
-				<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=employment.title.delete(' ')%>">
+				<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=employment.title%>">
 					<div class="panel-title">
 						<h3>
 							<%= employment.title%> - <%= employment.employer%>
 						</h3>
 					</div>
 				</div>
-				<div id="<%employment.title.delete(' ')%>" class="panel-collapse collapse in">
+				<div id="<%employment.title%>" class="panel-collapse collapse in">
 					<div class="panel-body"> <i>Description: </i> <%= employment.description %> </div>
 				</div>
 		<% end %>
