@@ -3,6 +3,9 @@ require 'test_helper'
 class Admin::UsersControllerTest < ActionController::TestCase
   setup do
     @user = users(:one)
+	# Sign in as admin so tests have access to pages
+    @admin_user = User.create ({ email: "adminuser@email.com", password: "adminpassword", admin: true })
+	session[:user_id] = @admin_user.id
   end
   
   test "admin can be created" do
