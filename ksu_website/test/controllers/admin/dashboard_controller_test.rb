@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-require 'test_helper'
-
-class Admin::DashboardControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-  end
-
-end
-=======
 require 'test_helper'
 
 class Admin::DashboardControllerTest < ActionController::TestCase
@@ -24,4 +13,3 @@ class Admin::DashboardControllerTest < ActionController::TestCase
   end
 
 end
->>>>>>> 9d29c98f57f0dc4deae1e43e05d156b6d31d155b
