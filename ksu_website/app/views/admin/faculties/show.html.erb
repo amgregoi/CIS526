@@ -1,0 +1,40 @@
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @faculty.name %>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @faculty.title %>
+  </p>
+
+  <p>
+    <strong>Office:</strong>
+    <%= @faculty.office %>
+  </p>
+
+  <p>
+    <strong>Phone number:</strong>
+    <%= @faculty.phone_number %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @faculty.email %>
+  </p>
+
+  <%= link_to 'Edit', edit_admin_faculty_path(@faculty) %> |
+  <%= link_to 'Back', admin_faculties_path %>
+
+</div>
+</body>
+</html>

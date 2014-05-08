@@ -1,0 +1,17 @@
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
+
+  <h1>Editing Faculty</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Show', admin_faculty_path(@faculty) %> |
+  <%= link_to 'Back', admin_faculties_path %>
+
+</div>
+</body>
+</html>

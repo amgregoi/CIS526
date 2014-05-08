@@ -1,28 +1,35 @@
 KsuWebsite::Application.routes.draw do
-  get "sessions/new"
-  get "log_out" => "sessions#destroy", :as => "log_out"
-  get "log_in" => "sessions#new", :as => "log_in"
-  get "sign_up" => "users#new", :as => "sign_up"
-    
-  resources :users
-  resources :sessions
-  resources :courses
-  resources :employments
-  resources :faculties
-  resources :clubs
-  resources :events
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"  
+  resources :sessions, only: [:create]  
+  resources :users, only: [:create]
+  
+  resources :courses, only: [:index]
+  resources :employments, only: [:index]
+  resources :faculties, only: [:index]
+  resources :clubs, only: [:index]
+  resources :events, only: [:index]
+  
+  namespace :admin do 
+    get '', to: 'dashboard#index', as: '/' 
+	resources :courses
+    resources :employments
+    resources :faculties
+    resources :clubs
+    resources :events
+	resources :users
+  end
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index'
+  root 'welcome#index'
 
-   get '/football', to: 'clubs#show#1'
-   get '/welcome', to: 'welcome#index'
-   get '/about', to: 'about#index'
-   get '/courses', to: 'courses#index'
-   get '/employments', to: 'employments#index'
+  get '/welcome', to: 'welcome#index'
+  get '/about', to: 'about#index'
+  get '/courses', to: 'courses#index'
+  get '/employments', to: 'employments#index'
+   
+   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

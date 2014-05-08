@@ -1,0 +1,54 @@
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
+
+  <h1>Listing Employments</h1>
+
+  <h3>Search</h3>
+  <%= form_tag employments_path, method: "get" do %>
+    <%= label_tag("Job Title: ") %> 
+      <%= text_field_tag :title_keywords %> <br/>
+    <%= label_tag("Employer: ") %> 
+	  <%= text_field_tag :employer_keywords %> <br/>
+    <%= label_tag("Employment Type: ") %> 
+	  <%= select_tag :job_type_select, options_for_select(Employment::JOB_TYPE_SELECTIONS.collect{ |j| [j, j] }) %> <br/>
+    <%= submit_tag "Enter" %>
+  <% end %>
+  <br><br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Employer</th>
+        <th>Job Type</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @employments.each do |employment| %>
+        <tr>
+          <td><%= employment.title %></td>
+          <td><%= employment.employer %></td>
+          <td><%= employment.job_type %></td>
+          <td><%= link_to 'Show', admin_employment_path(employment) %></td>
+          <td><%= link_to 'Edit', edit_admin_employment_path(employment) %></td>
+          <td><%= link_to 'Destroy', admin_employment_path(employment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br/>
+
+  <%= link_to 'New Employment', new_admin_employment_path %>
+
+</div>
+</body>
+</html>

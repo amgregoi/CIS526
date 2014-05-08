@@ -1,35 +1,41 @@
-<h1>Listing faculties</h1>
+<html>
+<head>
+<%=render "/layouts/header" %>
+</head>
+<body>
+<div id="main">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Office</th>
-      <th>Phone number</th>
-      <th>Email</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <h1>Listing Faculty</h1>
 
-  <tbody>
-    <% @faculties.each do |faculty| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= faculty.name %></td>
-        <td><%= faculty.title %></td>
-        <td><%= faculty.office %></td>
-        <td><%= faculty.phone_number %></td>
-        <td><%= faculty.email %></td>
-        <td><%= link_to 'Show', faculty %></td>
-        <td><%= link_to 'Edit', edit_faculty_path(faculty) %></td>
-        <td><%= link_to 'Destroy', faculty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Office</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @faculties.each do |faculty| %>
+        <tr>
+          <td><%= faculty.name %></td>
+          <td><%= faculty.title %></td>
+          <td><%= faculty.office %></td>
+          <td><%= faculty.phone_number %></td>
+          <td><%= faculty.email %></td>        
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Faculty', new_faculty_path %>
+  <br>
+
+</div>
+</body>
+</html>
