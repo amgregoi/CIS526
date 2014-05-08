@@ -3,20 +3,17 @@ CIS526 - Website<br>
 Final Sprint Goals<br>
 
 Jonathan:<br>
-  1) Add Admin Interface<br>
-    a) Only allow certain admin control based on roles of users<br>
-    b) Write tests<br>
+  1) Fix search forms (for courses)<br>
+  2) Fix problems with views in admin
 
 Kyle:<br>
-  1) Finish all sign-in/authentication<br>
-    a) On top-right of page, show login/signup or currently logged-in user with choice to log out<br>
-  2) Add roles to users for admin control<br>
+  1) Add more seeds, particularly for events<br>
   
 Andy:<br>
-  1) Finalize basic UI<br>
-  2) Make sure UI is (at least mostly) usable and readable on phones/tablets/etc<br>
-  3) Bundle events by date<br>
+  1) Pull out stuff you need from bootstrap<br>
+  2) Finalize basic UI<br>
+  3) Finish UI so that is (at least mostly) usable and readable on phones/tablets/etc<br>
+  4) Bundle events by date<br>
 
-Other(?):<br>
-  1) Add more seeds, particularly for events<br>
-  2) Just make sure that this isn't embarrassing to present, I guess<br>
+All:<br>
+  1) Just make sure that this isn't embarrassing to present, I guess<br>

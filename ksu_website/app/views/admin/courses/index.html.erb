@@ -8,7 +8,7 @@
   <h1>Listing Courses</h1>
 
   <h3>Search</h3>
-  <%= form_tag courses_path, method: "get" do %>
+  <%= form_tag admin_courses_path, method: "get" do %>
     <%= label_tag("Keywords: ") %><%= text_field_tag :keywords %> <br/>
     <%= label_tag("Department: ") %> <%= text_field_tag :department %> <br/>
     <%= label_tag("Course #: ") %> <%= text_field_tag :course_num %> <br/>

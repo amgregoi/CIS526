@@ -8,7 +8,7 @@
   <h1>Listing Events</h1>
 
   <h3>Search</h3>
-  <%= form_tag events_path, method: "get" do %>
+  <%= form_tag admin_events_path, method: "get" do %>
     <%= label_tag("Title: ") %> <%= text_field_tag :title_keywords %> <br/>
     <%= date_select(:chosen_date, "date", :discard_day => true) %> <br/>
     <%= label_tag("Free Food:") %> <%= check_box_tag :free_food_select %> <br/>
