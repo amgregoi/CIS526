@@ -28,14 +28,16 @@
 				
 				.navbar li {
 					height: 36px;
-					width: 100px; /* Each menu item is 150px wide */
+					width: 128px; /* Each menu item is 150px wide */
 					float: left; /* This lines up the menu items horizontally */
 					text-align: center; /* All text is placed in the center of the box */
 					list-style: none; /* Removes the default styling (bullets) for the list */
 					font: normal bold 12px/1.2em Arial, Verdana, Helvetica;
 					padding: 0;
 					margin: 0;
-					background-color: #5D478B; }
+					background-color: #5D478B; 
+					display:relative;
+					}
 
 				.navbar a{
 					padding: 18px 0; /* Adds a padding on the top and bottom so the text appears centered vertically */
@@ -51,6 +53,16 @@
 				
 				.navbar a:visited, a:active, a:link{
 					color:white;
+				}
+				
+				#login{
+					text-align: right;
+				}
+				
+				#login-wrapper{
+					float:left;
+					width: 425px;
+					display:relative;
 				}
 				
 				#login a:visited, a:active, a:link{
@@ -136,17 +148,11 @@
 		margin: -10px 0px 0px 0px;
 		float:left;
 	}
-	
-	#id{
-		float: left;
-
-	}
-
 
 #main{
 		margin-left:20%;
 		margin-right:20%;
-		width:60%;
+		width:1000px;
 		float:left;
 		width: 765px;
 }
