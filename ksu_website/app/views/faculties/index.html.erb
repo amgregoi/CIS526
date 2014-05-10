@@ -5,34 +5,16 @@
 <body>
 <div id="main">
 
-  <h1>Listing Faculty</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Office</th>
-        <th>Phone number</th>
-        <th>Email</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @faculties.each do |faculty| %>
-        <tr>
-          <td><%= faculty.name %></td>
-          <td><%= faculty.title %></td>
-          <td><%= faculty.office %></td>
-          <td><%= faculty.phone_number %></td>
-          <td><%= faculty.email %></td>        
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <h1>CIS Faculty</h1> </br>
+  
+  <% @faculties.each do |faculty| %>
+    <p>Name: <%= faculty.name %></p> 
+    <p>Title: <%= faculty.title %></p> 
+    <p>Office: <%= faculty.office %></p>
+    <p>Phone Number: <%= faculty.phone_number %></p>
+    <p>Email: <%= faculty.email %></p>
+	</br>
+  <% end %>
 
   <br>
 

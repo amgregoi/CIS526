@@ -1,11 +1,21 @@
 <html>
 <head>
 <%=render "/layouts/header" %>
+<style type = "text/css">
+    table, td, th {
+      border: 1px solid black;
+	  padding: 15px;
+    } 
+	th {
+	  background-color: rgb(107, 0, 161);
+      color:white
+	}
+</style>
 </head>
 <body>
 <div id="main">
 
-  <h1>Listing Employments</h1>
+  <h1>Listing Employment</h1>
 
   <h3>Search</h3>
   <%= form_tag admin_employments_path, method: "get" do %>
@@ -17,7 +27,10 @@
 	  <%= select_tag :job_type_select, options_for_select(Employment::JOB_TYPE_SELECTIONS.collect{ |j| [j, j] }) %> <br/>
     <%= submit_tag "Enter" %>
   <% end %>
-  <br><br>
+  </br>
+  
+  <%= link_to 'Add Employment', new_admin_employment_path %>
+  </br></br>
 
   <table>
     <thead>
@@ -46,8 +59,6 @@
   </table>
 
   <br/>
-
-  <%= link_to 'New Employment', new_admin_employment_path %>
 
 </div>
 </body>

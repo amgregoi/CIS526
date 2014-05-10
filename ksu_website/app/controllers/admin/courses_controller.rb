@@ -4,7 +4,7 @@ class Admin::CoursesController < AdminController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.filter(search_params.slice(:keywords, :department, :course_num))
+    @courses = Course.filter(search_params.slice(:department, :course_num, :keywords))
   end
 
   # GET /courses/1

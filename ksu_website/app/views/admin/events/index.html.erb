@@ -1,6 +1,16 @@
 <html>
 <head>
 <%=render "/layouts/header" %>
+<style type = "text/css">
+    table, td, th {
+      border: 1px solid black;
+	  padding: 15px;
+    } 
+	th {
+	  background-color: rgb(149, 29, 209);
+      color:white
+	}
+</style>
 </head>
 <body>
 <div id="main">
@@ -14,7 +24,10 @@
     <%= label_tag("Free Food:") %> <%= check_box_tag :free_food_select %> <br/>
     <%= submit_tag "Enter" %>
   <% end %>
-  <br><br>
+  </br>
+  
+  <%= link_to 'New Event', new_admin_event_path %>
+  </br></br>
 	
   <table>
     <thead>
@@ -28,10 +41,10 @@
     </thead>
 
     <tbody>
-      <% @events.each do |event| %>
+      <% Event.all.order(:event_date).each do |event| %>
         <tr>
+          <td><%= event.event_date.strftime("%B %d, %Y") %></td>
           <td><%= event.title %></td>
-          <td><%= event.description %></td>
           <td><%= link_to 'Show', admin_event_path(event) %></td>
           <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
           <td><%= link_to 'Destroy', admin_event_path(event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -41,8 +54,6 @@
   </table>
 
   <br/>
-
-  <%= link_to 'New Event', new_admin_event_path %>
 
 </div>
 </body>

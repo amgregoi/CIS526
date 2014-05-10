@@ -1,11 +1,25 @@
 <html>
 <head>
 <%=render "/layouts/header" %>
+<style type = "text/css">
+    table, td, th {
+      border: 1px solid black;
+	  padding: 15px;
+    } 
+	th {
+	  background-color: rgb(149, 29, 209);
+      color:white
+	}
+</style>
 </head>
 <body>
 <div id="main">
 
-<h1>Listing faculties</h1>
+<h1>Listing Faculty</h1>
+</br>
+
+<%= link_to 'Add Faculty Member', new_admin_faculty_path %>
+</br></br>
 
 <table>
   <thead>
@@ -32,8 +46,6 @@
 </table>
 
 <br>
-
-<%= link_to 'New Faculty', new_admin_faculty_path %>
 
 </div>
 </body>
