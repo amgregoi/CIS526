@@ -69,6 +69,6 @@ class Admin::FacultiesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def faculty_params
-      params.require(:faculty).permit(:name, :title, :office, :phone_number, :email)
+      params.require(:faculty).permit(:name, :title, :office, :phone_number, :email, :image)
     end
 end

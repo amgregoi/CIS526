@@ -8,6 +8,7 @@
   <h1>CIS Faculty</h1> </br>
   
   <% @faculties.each do |faculty| %>
+    <%= image_tag faculty.image.url if faculty.image_stored? %>
     <p>Name: <%= faculty.name %></p> 
     <p>Title: <%= faculty.title %></p> 
     <p>Office: <%= faculty.office %></p>

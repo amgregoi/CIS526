@@ -31,7 +31,12 @@
     <strong>Email:</strong>
     <%= @faculty.email %>
   </p>
-
+  
+  <p>
+    <strong>Photo:</strong>
+    <%= image_tag @faculty.image.url if @faculty.image_stored? %>
+  </p>
+  
   <%= link_to 'Edit', edit_admin_faculty_path(@faculty) %> |
   <%= link_to 'Back', admin_faculties_path %>
 

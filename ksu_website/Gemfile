@@ -2,6 +2,12 @@ source 'https://rubygems.org'
 
 gem "bcrypt-ruby", :require => "bcrypt"
 
+# Used for image uploads
+gem 'dragonfly', '~> 1.0.4'
+
+# Create seed files from data in database
+gem 'seed_dump'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
