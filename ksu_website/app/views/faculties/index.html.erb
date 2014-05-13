@@ -2,8 +2,8 @@
 <head>
 <%=render "/layouts/header" %>
 <style type = "text/css">
-  img {float:left; margin-left:120px;}
-  p {margin-left:300px;}
+  #info img {float:left; margin-left:120px;}
+  #info p {margin-left:300px;}
 </style>
 </head>
 <body>
@@ -11,6 +11,7 @@
 
   <h1>CIS Faculty</h1> </br>
   
+  <div id="info">
   <% @faculties.each do |faculty| %>
     <%= image_tag faculty.image.url if faculty.image_stored? %>
     <p><%= faculty.name %></p> 
@@ -20,7 +21,7 @@
     <p>Email: <%= faculty.email %></p>
 	</br>
   <% end %>
-
+  </div>
   <br>
 
 </div>
