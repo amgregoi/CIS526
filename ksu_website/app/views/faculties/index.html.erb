@@ -1,6 +1,10 @@
 <html>
 <head>
 <%=render "/layouts/header" %>
+<style type = "text/css">
+  img {float:left; margin-left:120px;}
+  p {margin-left:300px;}
+</style>
 </head>
 <body>
 <div id="main">
@@ -9,8 +13,8 @@
   
   <% @faculties.each do |faculty| %>
     <%= image_tag faculty.image.url if faculty.image_stored? %>
-    <p>Name: <%= faculty.name %></p> 
-    <p>Title: <%= faculty.title %></p> 
+    <p><%= faculty.name %></p> 
+    <p><b><%= faculty.title %></b></p> 
     <p>Office: <%= faculty.office %></p>
     <p>Phone Number: <%= faculty.phone_number %></p>
     <p>Email: <%= faculty.email %></p>
