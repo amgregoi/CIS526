@@ -15,7 +15,7 @@
 
   <br><br>
   <div class="panel-group" id="accordion">
-    <% for course in @courses.order(:course_number) %>
+    <% for course in @courses %>
 	  <div class="panel panel-default">
 		<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=course.course_number%>">
 		  <div class="panel-title">

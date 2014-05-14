@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.filter(search_params.slice(:department, :course_num, :keywords))
+    @courses = Course.order(:course_number).filter(search_params.slice(:department, :course_num, :keywords))
   end
 
   private
