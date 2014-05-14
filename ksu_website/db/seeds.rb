@@ -27,11 +27,78 @@ Employment.create!([
   {title: "Summer Scholarship", employer: "Kansas State University", job_type: "Scholarship", description: "Be a learner and a winner! It's that easy!"}
 ])
 Event.create!([
-  {title: "K-State Birthday", event_date: "2014-08-05 00:00:00", location: "Ballroom", description: "I would be surprised if that was the actual date. I didn't check.", free_food: true},
-  {title: "Computer Programming Contest", event_date: "2015-05-29 00:00:00", location: "Nichols Hall", description: "We do lots of programming. Lots and lots of it.", free_food: true},
-  {title: "Write \\Til You Drop", event_date: "2014-04-24 00:00:00", location: "Seaton Hall", description: "We do lots of writing. Lots and lots of it.", free_food: false},
+  #January
+  {title: "GE Aviation visit", event_date: "2015-1-05 00:00:00", location: "Nichols Atrium", description: "Free food, talk with a company about careers", free_food: true},
+  {title: "Netsmart visit", event_date: "2015-1-10 00:00:00", location: "Nichols Atrium", description: "Free food, talk with a company about careers", free_food: true},
+  {title: "ACM meeting", event_date: "2015-1-27 00:00:00", location: "Nichols 126", description: "First meeting of the semester", free_food: true},
+  {title: "Movie night", event_date: "2015-1-28 00:00:00", location: "Nichols 126", description: "Wreck It Ralph will be playing", free_food: false},
+  {title: "Pc Lan party", event_date: "2015-1-30 00:00:00", location: "Nichols 19", description: "Games, free drinks, and more games", free_food: false},
+  #February 
+  {title: "High School Programming Contest", event_date: "2015-2-07 00:00:00", location: "Student Union Ballroom", description: "Free food, volunteer work and extra credit", free_food: true},
+  {title: "ACM meeting", event_date: "2015-2-10 00:00:00", location: "Nichols 126", description: "second meeting of the semester", free_food: true},
+  {title: "Garmin visit", event_date: "2015-2-15 00:00:00", location: "Nichols Atrium", description: "Talk with Garmin and enjoy free pizza", free_food: true},
+  {title: "Console Lan Party", event_date: "2015-2-28 00:00:00", location: "Nichols 126", description: "Super Smash Brothers Tournament", free_food: false},
+  {title: "Movie Night", event_date: "2015-2-30 00:00:00", location: "Nichols 126", description: "Batman Begins will be playing", free_food: false},
+  #March
+  {title: "Dance", event_date: "2015-3-08 00:00:00", location: "Student Union Ballroom", description: "Get your swag on (yes, swag)", free_food: false},
+  {title: "ACM meeting", event_date: "2015-3-10 00:00:00", location: "Nichols 126", description: "Regular Meeting", free_food: true},
+  {title: "Garmin visit", event_date: "2015-3-15 00:00:00", location: "Nichols Atrium", description: "Talk with Garmin and enjoy free pizza", free_food: true},
+  {title: "Console Lan Party", event_date: "2015-3-28 00:00:00", location: "Nichols 126", description: "Super Smash Brothers Tournament", free_food: false},
+  {title: "Movie Night", event_date: "2015-3-30 00:00:00", location: "Nichols 126", description: "The Dark Knight will be playing", free_food: false},
+  #April
+  {title: "Write Til You Drop", event_date: "2014-04-24 00:00:00", location: "Seaton Hall", description: "We do lots of writing. Lots and lots of it.", free_food: false},
+  {title: "ACM meeting", event_date: "2015-4-10 00:00:00", location: "Nichols 126", description: "second meeting of the semester", free_food: true},
+  {title: "Movie Night", event_date: "2015-4-12 00:00:00", location: "Nichols 126", description: "The Dark Knight Rises will be playing", free_food: false},
+  {title: "Microsoft visit", event_date: "2015-4-15 00:00:00", location: "Nichols Atrium", description: "Talk with Microsoft and enjoy free pizza", free_food: true},
+  {title: "Google visit", event_date: "2015-4-20 00:00:00", location: "Nichols Atrium", description: "Talk with Google and enjoy free pizza", free_food: true},
+  #May
   {title: "The Eat-A-Thon", event_date: "2014-05-02 00:00:00", location: "Kramer Dining Center", description: "We eat until we drop...dead.", free_food: true},
-  {title: "Dance Dance Dance", event_date: "2015-09-01 00:00:00", location: "KSU Union", description: "Self-explanatory. Bring your puffy shirt.", free_food: false}
+  {title: "Computer Programming Contest", event_date: "2015-05-13 00:00:00", location: "Nichols Hall", description: "We do lots of programming. Lots and lots of it.", free_food: true},
+  {title: "Pc Lan party", event_date: "2015-5-15 00:00:00", location: "Nichols 19", description: "Games, free drinks, and more games", free_food: false},
+  {title: "Movie Night", event_date: "2015-5-21 00:00:00", location: "Nichols 126", description: "The Dark Knight will be playing", free_food: false},
+  {title: "Amazon visit", event_date: "2015-2-22 00:00:00", location: "Nichols Atrium", description: "Talk with Amazon and enjoy free pizza", free_food: true},
+  #June
+  {title: "High School Programming Contest", event_date: "2015-6-07 00:00:00", location: "Student Union Ballroom", description: "Free food, volunteer work and extra credit", free_food: true},
+  {title: "ACM meeting", event_date: "2015-6-10 00:00:00", location: "Nichols 126", description: "Regular Meeting", free_food: true},
+  {title: "Garmin visit", event_date: "2015-6-15 00:00:00", location: "Nichols Atrium", description: "Talk with Garmin and enjoy free pizza", free_food: true},
+  {title: "Console Lan Party", event_date: "2015-6-28 00:00:00", location: "Nichols 126", description: "World of Warcraft Tournament", free_food: false},
+  {title: "Movie Night", event_date: "2015-6-30 00:00:00", location: "Nichols 126", description: "Inception will be playing", free_food: false},
+  #July 
+  {title: "High School Programming Contest", event_date: "2015-7-07 00:00:00", location: "Student Union Ballroom", description: "Free food, volunteer work and extra credit", free_food: true},
+  {title: "ACM meeting", event_date: "2015-7-10 00:00:00", location: "Nichols 126", description: "Regular Meeting", free_food: true},
+  {title: "Garmin visit", event_date: "2015-7-15 00:00:00", location: "Nichols Atrium", description: "Talk with Garmin and enjoy free pizza", free_food: true},
+  {title: "Console Lan Party", event_date: "2015-7-28 00:00:00", location: "Nichols 126", description: "Civ 5 Tournament", free_food: false},
+  {title: "Movie Night", event_date: "2015-7-30 00:00:00", location: "Nichols 126", description: "The Prestige will be playing", free_food: false},
+  #August
+  {title: "K-State Birthday", event_date: "2014-08-05 00:00:00", location: "Ballroom", description: "I would be surprised if that was the actual date. I didn't check.", free_food: true},
+  {title: "Movie Night", event_date: "2015-8-10 00:00:00", location: "Nichols 126", description: "Pitch Perfect will be playing", free_food: false},
+  {title: "Console Lan Party", event_date: "2015-8-16 00:00:00", location: "Nichols 126", description: "Super Smash Brothers Tournament", free_food: false},
+  {title: "Computer Programming Contest", event_date: "2015-8-29 00:00:00", location: "Nichols Hall", description: "We do lots of programming. Lots and lots of it.", free_food: true},
+  {title: "Cerner visit", event_date: "2015-8-30 00:00:00", location: "Nichols Atrium", description: "Talk with Cerner and enjoy free pizza", free_food: true},
+  #September
+  {title: "Dance Dance Dance", event_date: "2015-09-01 00:00:00", location: "KSU Union", description: "Self-explanatory. Bring your puffy shirt.", free_food: false},
+  {title: "Movie Night", event_date: "2015-9-11 00:00:00", location: "Nichols 126", description: "Elysium will be playing", free_food: false},
+  {title: "Console Lan Party", event_date: "2015-9-12 00:00:00", location: "Nichols 126", description: "Starcraft 2 Tournament", free_food: false},
+  {title: "Computer Programming Contest", event_date: "2015-9-20 00:00:00", location: "Nichols Hall", description: "We do lots of programming. Lots and lots of it.", free_food: true},
+  {title: "Garmin visit", event_date: "2015-9-27 00:00:00", location: "Nichols Atrium", description: "Talk with Garmin and enjoy free pizza", free_food: true},
+  #October 
+  {title: "High School Programming Contest", event_date: "2015-10-07 00:00:00", location: "Student Union Ballroom", description: "Free food, volunteer work and extra credit", free_food: true},
+  {title: "ACM meeting", event_date: "2015-10-10 00:00:00", location: "Nichols 126", description: "Regular Meeting", free_food: true},
+  {title: "Garmin visit", event_date: "2015-10-15 00:00:00", location: "Nichols Atrium", description: "Talk with Garmin and enjoy free pizza. Garmin really likes us", free_food: true},
+  {title: "Console Lan Party", event_date: "2015-10-28 00:00:00", location: "Nichols 126", description: "Halo", free_food: false},
+  {title: "Movie Night", event_date: "2015-10-30 00:00:00", location: "Nichols 126", description: "Fight Club will be playing", free_food: false},
+  #November
+  {title: "High School Programming Contest", event_date: "2015-11-07 00:00:00", location: "Student Union Ballroom", description: "Free food, volunteer work and extra credit", free_food: true},
+  {title: "ACM meeting", event_date: "2015-11-10 00:00:00", location: "Nichols 126", description: "Regular Meeting", free_food: true},
+  {title: "Apple visit", event_date: "2015-11-15 00:00:00", location: "Nichols Atrium", description: "Talk with Apple and enjoy free pizza", free_food: true},
+  {title: "Console Lan Party", event_date: "2015-11-28 00:00:00", location: "Nichols 126", description: "Super Smash Brothers Tournament", free_food: false},
+  {title: "Movie Night", event_date: "2015-11-30 00:00:00", location: "Nichols 126", description: "The Hunger Games will be playing", free_food: false},
+  #December
+  {title: "High School Programming Contest", event_date: "2015-12-07 00:00:00", location: "Student Union Ballroom", description: "Free food, volunteer work and extra credit", free_food: true},
+  {title: "ACM meeting", event_date: "2015-12-10 00:00:00", location: "Nichols 126", description: "Regular Meeting", free_food: true},
+  {title: "Sprint visit", event_date: "2015-12-15 00:00:00", location: "Nichols Atrium", description: "Talk with Sprint and enjoy free pizza", free_food: true},
+  {title: "Console Lan Party", event_date: "2015-12-28 00:00:00", location: "Nichols 126", description: "Splinter Cell Tournament", free_food: false},
+  {title: "Movie Night", event_date: "2015-12-30 00:00:00", location: "Nichols 126", description: "Rick Roll will be playing on repeat", free_food: false},
 ])
 Faculty.create!([
   {name: "Torben Amtoft", title: "Associate Professor", office: "N219C", phone_number: "7855327917", email: "tamtoft@cis.ksu.edu", image_uid: "2014/05/12/333jqce103_torben_amtoft.jpg"},
