@@ -42,6 +42,6 @@ Faculty.create!([
   {name: "Dave Schmidt", title: "Professor", office: "N219A", phone_number: "7855327912", email: "schmidt@cis.ksu.edu", image_uid: "2014/05/12/3opbpn1th0_dave_schmidt.jpg"}
 ])
 User.create!([
-  {email: "admin@cis.ksu", password_hash: "$2a$10$crvDtiaO1QOm0aYK4ZFIvedYSyxfeYR7JHMXFXloSqDzoTH7o7gk2", password_salt: "$2a$10$crvDtiaO1QOm0aYK4ZFIve", admin: true},
-  {email: "user@cis.ksu", password_hash: "$2a$10$qG5Tpk3nzUU5EM8YCXLzMOtS3iZRl7cgdc4l6SlprWvxMf6EyUmd2", password_salt: "$2a$10$qG5Tpk3nzUU5EM8YCXLzMO", admin: nil}
+  {email: "admin@cis.ksu", password: "admin", admin: true},
+  {email: "user@cis.ksu", password: "user"}
 ])
