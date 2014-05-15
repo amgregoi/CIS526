@@ -5,6 +5,11 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
 	@events = Event.filter(search_params.slice(:title_keywords, :chosen_date, :free_food_select))
+    if @events[0] == nil
+	  @search_date = Date.today
+	else
+	  @search_date = @events[0].event_date.to_date
+	end
   end
 
   private

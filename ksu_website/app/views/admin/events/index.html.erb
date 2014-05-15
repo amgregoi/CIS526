@@ -20,7 +20,6 @@
   <h3>Search</h3>
   <%= form_tag admin_events_path, method: "get" do %>
     <%= label_tag("Title: ") %> <%= text_field_tag :title_keywords %> <br/>
-    <%= date_select(:chosen_date, "date", :discard_day => true) %> <br/>
     <%= label_tag("Free Food:") %> <%= check_box_tag :free_food_select %> <br/>
     <%= submit_tag "Enter" %>
   <% end %>
@@ -41,7 +40,7 @@
     </thead>
 
     <tbody>
-      <% Event.all.order(:event_date).each do |event| %>
+      <% @events.order(:event_date).each do |event| %>
         <tr>
           <td><%= event.event_date.strftime("%B %d, %Y") %></td>
           <td><%= event.title %></td>

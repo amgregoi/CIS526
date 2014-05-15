@@ -14,7 +14,7 @@
 	  <%= label_tag("Employer: ") %> 
 		<%= text_field_tag :employer_keywords %> <br/>
 	  <%= label_tag("Employment Type: ") %> 
-		<%= select_tag :job_type_select, options_for_select(Employment::JOB_TYPE_SELECTIONS.collect{ |j| [j, j] }) %> <br/>
+		<%= select_tag :job_type_select, options_for_select(Employment::JOB_TYPE_SELECTIONS.collect{ |j| [j, j] }), include_blank: true %> <br/>
 	  <%= submit_tag "Enter" %>
 	<% end %>
 	<br><br>
