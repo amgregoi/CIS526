@@ -1,225 +1,122 @@
-#wrapper{
-	margin: 0 auto;
-	text-align: left;
-	width: 100%;
-	min-width: 901px;
+#header-wrapper{
+	text-align:center;
 }
 
-	#wrap{
-		min-width: 65%; /* Spans the width of the page */
-		position: relative; /*background-color: #366b82;*/ 
-		}
-		#horizontal_bar {
-		width: 100%;
-		height: 36px;
-		background-color: #512888;
-		border-bottom: 5px solid #ECD391;
-		align-items:center;
-		}
+#main a:link, a:visited, a:hover, a:active{
+	color:black;
+	display: inline-block;
+}
 
-			.navbar {
-				padding: 0;
-				padding-left: 20%;
-				margin: 0;
-				position: relative; /* Ensures that the menu doesn’t affect other elements */
-				float:center;
-				min-width:600px;
-				}
-				
-				.navbar li {
-					height: 36px;
-					width: 128px; /* Each menu item is 150px wide */
-					float: left; /* This lines up the menu items horizontally */
-					text-align: center; /* All text is placed in the center of the box */
-					list-style: none; /* Removes the default styling (bullets) for the list */
-					font: normal bold 12px/1.2em Arial, Verdana, Helvetica;
-					padding: 0;
-					margin: 0;
-					background-color: #5D478B; 
-					display:relative;
-					}
+#accordion{
+	collapsible: true;
+	active: false;
+}
 
-				.navbar a{
-					padding: 18px 0; /* Adds a padding on the top and bottom so the text appears centered vertically */
-					text-decoration: none; /* Removes the default hyperlink styling. */
-					color: white; /* Text color is white */
-					display: block; }
-
-				.navbar li:hover, a:hover { background-color: #5D478B;
-					height: 1px;
-					display:block;
-					color: white;
-				}
-				
-				.navbar a:visited, a:active, a:link{
-					color:white;
-				}
-				
-				#login{
-					text-align: right;
-				}
-				
-				#login-wrapper{
-					float:left;
-					width: 425px;
-					display:relative;
-				}
-				
-				#login a:visited, a:active, a:link{
-					color:white;
-				}
-
-
-
-
-				
-	div#vmenu {
-		margin: 0;
-		padding: 0em 0em 0em 0em;
-		border: solid 1px #54879d;
-		background: #5D478B;
-		width: 13.5em; 
-		position:relative;}
-
-		div#vmenu ul {
-			margin: 0;
-			padding: 0;
-			list-style: none; }
-
-			div#vmenu ul li {
-				margin: 0;
-				padding: 0;
-				list-style: none; }
-
-			div#vmenu ul a:link {
-				margin: 0;
-				padding: .2em 0em .2em .4em;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: medium;
-				background-color: #54879d;
-				color: #0059a0;
-				display: block; }
-
-			div#vmenu ul a:active {
-				margin: 0;
-				padding: .25em .5em .25em .5em;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: medium;
-				background: #54879d;
-				color: #ffffff;
-				display: block; }
-
-			div#vmenu ul a:visited {
-				margin: 0;
-				padding: .25em .5em .25em .5em;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: medium;
-				background: #54879d;
-				color: #ffffff;
-				display: block; }
-
-			div#vmenu ul li a:hover {
-				margin: 0;
-				padding: .2em 0em .2em .4em;
-				text-decoration: none;
-				font-weight: bold;
-				font-size: medium;
-				background-color: #54879d;
-				color: #ffffff;
-				display: block; } 
-				
-	div#main_body{
-		float: left;
-		margin-left: 20%;
+/*used to center objects on page */
+#main-wrapper{
+	text-align:center;
+	background-color: #333;
+	
+}
+	#main{
+		height: calc(100% - 30px);
+		display:inline-block;
+		max-width: 765px;
+		min-width: 765px; 
+		text-align: left;
+		background-color: white;
+	}
+	#wrapper{
+		display:inline-block;
+		width: 100%; /* Spans the width of the page */
+		text-align: left;
 	}
 	
 	#header {
 		background: linear-gradient(to bottom, #4F2684 0%, #7137BD 100%) repeat scroll 0% 0% transparent;
-		height:80px;
+		height:100px;
 	}
-	#header-logo{
-		padding-left:20%;
-		padding-top: 10px;
-		color: #512888;
-		text-decoration: none;
-		margin: -10px 0px 0px 0px;
-		float:left;
-	}
+		#header-logo{
+			padding-top: 10px;
+			color: #512888;
+			text-decoration: none;
+			display: inline-block;
+			text-align:left;
+		}
 
-#main{
-		margin-left:20%;
-		margin-right:20%;
-		width:1000px;
-		float:left;
-		width: 765px;
-}
+		#login-wrapper{
+			width: 450px;
+			display:inline-block;
+			margin-right: 5px;
+		}
 
-#main #event_table{
-	border-radius:25px;
-	width: 355px;
-	max-height: 550px;
-	overflow:auto;
-	border-style:solid;
-	border-width: 1px;
-	margin-right:15px;
-	display:relative;
-}
+			#login{
+				text-align: right;
+			}
 
-#main #event_table2{
-	border-radius:25px;
-	width: 355px;
-	max-height: 550px;
-	overflow:auto;
-	border-style:solid;
-	border-width: 1px;
-	display:relative;
+			#login-wrapper p, a:visited, a:active, a:link, a:hover{
+				color:white;
+				display:inline-block;
+			}
 	
-}
+	
+	.navbar {
+			display: inline-block;
+			padding: 0;
+			text-align:left;
 
+		}
+		.navbar li {
+				height: 36px;
+				width: 109px; /* Each menu item is 150px wide */
+				float: left; /* This lines up the menu items horizontally */
+				text-align: center; /* All text is placed in the center of the box */
+				list-style: none; /* Removes the default styling (bullets) for the list */
+				font: normal bold 12px/1.2em Arial, Verdana, Helvetica;
+				padding: 0;
+				margin: 0;
+				background-color: #5D478B; 
+				display:relative;
+			}
 
-/*
- * Off Canvas navbar toggle right
- * --------------------------------------------------
- */
+			.navbar a{
+				padding: 18px 0; /* Adds a padding on the top and bottom so the text appears centered vertically */
+				text-decoration: none; /* Removes the default hyperlink styling. */
+				color: white; /* Text color is white */
+				display: block; 
+			}
 
-@media screen and (max-width: 768px) {
-  .row-offcanvas .collapsing {
-	-webkit-transition: none 0;
-    -moz-transition: none 0;
-    transition: none 0;
-  }
- .row-offcanvas .navbar {
-	position: absolute;
-	z-index: 2;
-    right:0;
-    height:100%;
-    width:55px;
-    border:0;
-  }
-  .row-offcanvas .navbar-toggle {
-    margin-right: 5px;
-  	margin-left: 5px;
-  }
-  .row-offcanvas {
-    position: relative;
-  }
-  .row-offcanvas-right.active .navbar {
-	position: absolute;
-	z-index: 2;
-    right: -28.4%;
-    width:40%;
-  }
-  .row-offcanvas-right.active {
-    left: -30%;
-  }  
-  .row-offcanvas-right.active .navbar-collapse {
-    position: relative;
-    width: 100%;
-  }  
-  .row-offcanvas .content {
-	width:calc(100% - 60px);
-  }
-}
+			.navbar li:hover, a:hover { background-color: #5D478B;
+				height: 1px;
+				display:block;
+				color: white;
+			}
+			
+			.navbar a:visited, a:active, a:link{
+				color:white;
+			}
+			
+	
+	/*Specific to homepage tables */
+	#main #event_table{
+		border-radius:25px;
+		margin-left:10px;
+		width: 350px;
+		max-height: 550px;
+		overflow:auto;
+		border-style:solid;
+		border-width: 1px;
+		display:inline-block;
+	}
+	/*Specific to homepage tables */
+	#main #employment_table{
+		border-radius:25px;
+		margin-left: 10px;
+		width: 350px;
+		max-height: 550px;
+		overflow:auto;
+		border-style:solid;
+		border-width: 1px;
+		display:inline-block;
+		
+	}

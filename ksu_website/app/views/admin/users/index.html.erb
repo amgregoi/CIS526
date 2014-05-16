@@ -13,38 +13,40 @@
 </style>
 </head>
 <body>
-<div id="main">
+<div id="main-wrapper">
+	<div id="main">
 
-<h1>Listing Users</h1>
-</br>
+	<h1>Listing Users</h1>
+	</br>
 
-<%= link_to 'Add User', new_admin_user_path %>
-</br></br>
+	<%= link_to 'Add User', new_admin_user_path %>
+	</br></br>
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th></th>
-      <th></th>
-	  <th></th>
-    </tr>
-  </thead>
+	<table>
+	  <thead>
+		<tr>
+		  <th>Email</th>
+		  <th></th>
+		  <th></th>
+		  <th></th>
+		</tr>
+	  </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', admin_user_path(user) %></td>
-        <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
-        <td><%= link_to 'Destroy', admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+	  <tbody>
+		<% @users.each do |user| %>
+		  <tr>
+			<td><%= user.email %></td>
+			<td><%= link_to "Show", admin_user_path(user) %></td>
+			<td><%= link_to "Edit", edit_admin_user_path(user) %></td>
+			<td><%= link_to "Destroy", admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		  </tr>
+		<% end %>
+	  </tbody>
+	</table>
 
-<br>
+	<br>
 
+	</div>
 </div>
 </body>
 </html>

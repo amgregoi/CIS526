@@ -7,23 +7,25 @@
 </style>
 </head>
 <body>
-<div id="main">
+<div id="main-wrapper">
+	<div id="main">
 
-  <h1>CIS Faculty</h1> </br>
-  
-  <div id="info">
-  <% @faculties.each do |faculty| %>
-    <%= image_tag faculty.image.url if faculty.image_stored? %>
-    <p><%= faculty.name %></p> 
-    <p><b><%= faculty.title %></b></p> 
-    <p>Office: <%= faculty.office %></p>
-    <p>Phone Number: <%= faculty.phone_number %></p>
-    <p>Email: <%= faculty.email %></p>
-	</br>
-  <% end %>
-  </div>
-  <br>
+	  <h1>CIS Faculty</h1> </br>
+	  
+	  <div id="info">
+	  <% @faculties.each do |faculty| %>
+		<%= image_tag faculty.image.url if faculty.image_stored? %>
+		<p><%= faculty.name %></p> 
+		<p><b><%= faculty.title %></b></p> 
+		<p>Office: <%= faculty.office %></p>
+		<p>Phone Number: <%= faculty.phone_number %></p>
+		<p>Email: <%= faculty.email %></p>
+		</br>
+	  <% end %>
+	  </div>
+	  <br>
 
+	</div>
 </div>
 </body>
 </html>

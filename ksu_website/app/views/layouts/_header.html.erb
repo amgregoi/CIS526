@@ -8,28 +8,39 @@
 <script src="bootstrap-311/js/bootstrap.js"></script>
 
 <body>
-  <div id = "wrapper">
-    <div id = "header">
-      <div id="header-logo">
-		<a href="/welcome"><img width="288" height="70" src="/../wordmark.png" alt="Kansas State University"></a>
-      </div>
-	  <div id="login-wrapper">
-		<div id="login">
-		  <a href="/login"> Sign in </a>				
-		</div>
-	  </div>
-	</div>
+
+
+	
+		<div id = "header">
+			<div id="header-wrapper">
+			  <div id="header-logo">
+				<a href="/welcome"><img width="288" height="70" src="/../wordmark.png" alt="Kansas State University"></a>
+			  </div>
+			  <div id="login-wrapper">
+			    <div id="login">
+				<% if current_user %>
+				    <%= link_to current_user.email, admin_path,{:style=>'color:#FFFFFF;'} %><br>
+				    <a href="/logout" style="color:white"> Logout </a>
+					<% u = current_user.email %>
+				<% else %>
+				    <a href="/login" style="color:white"> Sign in </a>				
+				<% end %>
+			    </div>
+			  </div>
+			</div>
+			</div>
 
     <!-- EXAMPLE: http://www.bootply.com/111223 -->
+	<div id="main-wrapper">
+		<ul class="navbar">
+		  <li><a href="/welcome">Home</a></li>
+		  <li><a href="/about">About</a></li>
+		  <li><a href="/courses">Courses</a></li>
+		  <li><a href="/faculties">Faculty</a></li>
+		  <li><a href="/employments">Employment</a></li>
+		  <li><a href="/clubs">Clubs</a></li>
+		  <li><a href="/events">Events</a></li>
+		</ul>
+	</div>
 
-	<ul class="navbar">
-	  <li><a href="/welcome">Home</a></li>
-	  <li><a href="/about">About</a></li>
-	  <li><a href="/courses">Courses</a></li>
-	  <li><a href="/faculties">Faculty</a></li>
-	  <li><a href="/employments">Employment</a></li>
-	  <li><a href="/clubs">Clubs</a></li>
-	  <li><a href="/events">Events</a></li>
-	</ul>
-  </div>
 </body>
