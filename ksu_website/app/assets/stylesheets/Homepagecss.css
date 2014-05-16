@@ -15,11 +15,11 @@
 /*used to center objects on page */
 #main-wrapper{
 	text-align:center;
-	background-color: #333;
+	background-color: #E2E0D6;
 	
 }
+
 	#main{
-		height: calc(100% - 30px);
 		display:inline-block;
 		max-width: 765px;
 		min-width: 765px; 
