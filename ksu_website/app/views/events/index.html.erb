@@ -15,6 +15,10 @@
 	<br><br>
 	
 	<div class="panel-group" id="accordion">
+	    <% if @events[0] == nil %>
+		    <p>No events for this month</p>
+		<% end %>
+		
 		<% for event in @events %>
 			<div class="panel panel-default">
 				<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#<%=event.title.delete(' ')%>">
