@@ -1,19 +1,14 @@
-CIS526 - Website<br>
+CIS526: K-State Website<br>
 ======<br>
-Final Sprint Goals<br>
 
-Jonathan:<br>
-  1) Fix search forms (for courses)<br>
-  2) Fix problems with views in admin
+Authors: Jonathan Kress, Andy Gregoire, Kyle Murphy<br>
 
-Kyle:<br>
-  1) Add more seeds, particularly for events<br>
-  
-Andy:<br>
-  1) Pull out stuff you need from bootstrap<br>
-  2) Finalize basic UI<br>
-  3) Finish UI so that is (at least mostly) usable and readable on phones/tablets/etc<br>
-  4) Bundle events by date<br>
+This is the final class project for Web Interface Design (CIS 526) at K-State. Using Ruby and Agile techniques, we reimplemented K-State's main website at our own discretion and capabilities.<br>
 
-All:<br>
-  1) Just make sure that this isn't embarrassing to present, I guess<br>
+Although the three of us did not possess much experience with web design prior to this class, we were able to implement several necessary features that we felt were essential to a college website, including:<br>
+
+1. Clean, User-friendly GUI<br>
+2. Essential information, such as instructors, events, clubs, courses, etc.<br>
+3. Basic Search for the above model classes<br>
+4. User Authentication<br>
+5. Admin Control<br>
